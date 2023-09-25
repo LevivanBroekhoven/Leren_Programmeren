@@ -1,6 +1,5 @@
 entre = 7.45
 antwoord = 45 / 5 
-
 PP = antwoord * 0.37
 
 totale_koste = PP + entre
