@@ -4,5 +4,3 @@ kortingbon = 0.50*3
 
 antwoord = crosaint + stokbrood - kortingbon
 print (antwoord)    
-
-
