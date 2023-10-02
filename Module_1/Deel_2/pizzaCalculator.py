@@ -3,7 +3,7 @@ medium = 2
 large = 3
 
 PizzaGroote = input("wat voor grote pizza wilt u? (small medium large) ")
-PizzaAantal = (input("hoeveel pizza's wilt u? "))
+PizzaAantal = int(input("hoeveel pizza's wilt u? "))
 
 if PizzaGroote == ("small"):
     prijs = PizzaAantal * small
