@@ -1,0 +1,26 @@
+# Voornaam: [Jouw Voornaam]
+# Achternaam: [Jouw Achternaam]
+# Opdracht: Pizza calculator
+
+# Prijzen voor de verschillende pizza-afmetingen
+prijzen = {"small": 8.99,"medium": 11.99,"large": 14.99}
+
+# Vraag de klant om het aantal pizza's per afmeting
+aantal_small = int(input("Hoeveel small pizza's wil je bestellen? "))
+aantal_medium = int(input("Hoeveel medium pizza's wil je bestellen? "))
+aantal_large = int(input("Hoeveel large pizza's wil je bestellen? "))
+
+# Bereken de prijs per afmeting
+prijs_small = aantal_small * prijzen["small"]
+prijs_medium = aantal_medium * prijzen["medium"]
+prijs_large = aantal_large * prijzen["large"]
+
+# Bereken de totaalprijs
+totaalprijs = prijs_small + prijs_medium + prijs_large
+
+# Toon het bonnetje
+print("Bonnetje:")
+print("Small pizza's:", aantal_small, "x", prijzen["small"], "= $", prijs_small)
+print("Medium pizza's:", aantal_medium, "x", prijzen["medium"], "= $", prijs_medium)
+print("Large pizza's:", aantal_large, "x", prijzen["large"], "= $", prijs_large)
+print("Totaalprijs: $", totaalprijs)
