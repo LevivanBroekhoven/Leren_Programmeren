@@ -13,6 +13,8 @@ elif a < b:
 else:
     a == b
     print("a en b zijn even groot")
+    min = a
+    max = b
 
 print (f"Het minimum is {min}")
 print (f"Het maximum is {max}")
