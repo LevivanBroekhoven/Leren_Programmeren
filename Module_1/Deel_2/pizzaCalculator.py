@@ -9,16 +9,14 @@ prijs_small  = PizzaAantalsmall   * prijzen["small"]
 prijs_medium = PizzaAantalmedium  * prijzen["medium"]
 prijs_large  = PizzaAantallarge   * prijzen["large"]
 
-totaalprijs = prijs_small + prijs_medium + prijs_large
+totaalprijs = round(prijs_small + prijs_medium + prijs_large ,2)
 totaalaantal = PizzaAantalsmall + PizzaAantalmedium + PizzaAantallarge
 
 print(" ------------------------------------------")
-print("                  Bonnetje                 ")
+print("                 Bonnetje                  ")
 print(" ------------------------------------------")
 print("                                           ")
 print(f"  Aantal pizza's {totaalaantal}           ")
 print(f"  Prijs {totaalprijs} euro                ")
 print("                                           ")
-print(" -------------------------------------------")
-
-            
+print(" -------------------------------------------")            

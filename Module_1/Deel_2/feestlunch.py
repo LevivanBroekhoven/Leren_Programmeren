@@ -11,5 +11,5 @@ stokbroodprijs = STOKBROODP *stokbrood
 kortingbonprijs = KORTINGBON * kortingbon
 
 antwoordC = crosaintprijs + stokbroodprijs - kortingbonprijs
-antwoordE = antwoordC /100
-print ("De feestlunch kost je bij de bakker",round(antwoordE,2),"euro voor",crosaint,"crossaints en",stokbrood, "stokbroden als de",kortingbon,"kortingsbonnen nog geldig zijn!.")
+antwoordE = round(antwoordC /100 ,2)
+print ("De feestlunch kost je bij de bakker",antwoordE,"euro voor",crosaint,"crossaints en",stokbrood, "stokbroden als de",kortingbon,"kortingsbonnen nog geldig zijn!.")
