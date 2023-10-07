@@ -5,8 +5,6 @@ SLB_naam = ("Eugene")
 gastheer = input("Naam gastheer ")
 gasten = int(input("Hoeveel gasten? "))
 
-
-
 if gastheer == mijn_naam:
     print('No Party')
 elif gastheer == SLB_naam:
@@ -21,4 +19,3 @@ elif gastheer or gasten and chips and drank == True:
     print("Start the Party")
 else:
     print('No Party')
-    
