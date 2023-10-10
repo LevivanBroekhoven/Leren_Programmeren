@@ -1,7 +1,6 @@
 a = input("voeg een getal toe ")
 b = input("voeg een getal toe ")
-a = a
-b = b
+
 if a > b:
     max = a
     min = b
