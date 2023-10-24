@@ -19,3 +19,4 @@ elif gastheer or gasten and chips and drank == True:
     print("Start the Party")
 else:
     print('No Party')
+
