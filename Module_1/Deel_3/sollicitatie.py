@@ -15,17 +15,11 @@ ResultaatSollicitatie = "Wel"
 
 MIN_GEWICHT = 90
 MAX_GEWICHT = 120
-
 MIN_LENGTE = 150
 MAX_LENGTE = 220
-
 SNOR_MIN = 10
-
 HAAR_MIN = 20
-
 LACH_MIN = 10
-
-
 
 if Gewicht < MIN_GEWICHT or Gewicht > MAX_GEWICHT or Hoed == "nee" or lengte < MIN_LENGTE or lengte > MAX_LENGTE or certificaat == "nee" or rijbewijs == "nee" or diploma == "nee":
     ResultaatSollicitatie = "Niet"
