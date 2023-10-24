@@ -1,12 +1,12 @@
 drank = True
-chips = False
+chips = True
 mijn_naam = ("Levi")
 SLB_naam = ("Eugene")
 gastheer = input("Naam gastheer ")
 gasten = int(input("Hoeveel gasten? "))
 
 if gastheer == mijn_naam:
-    print('No Party')
+    print('Start the party')
 elif gastheer == SLB_naam:
     print('No Party')
 elif gastheer and drank == True:

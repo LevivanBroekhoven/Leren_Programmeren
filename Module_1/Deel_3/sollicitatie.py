@@ -16,7 +16,7 @@ ResultaatSollicitatie = "Wel"
 if Gewicht == "nee" or Hoed == "nee" or lengte == "nee" or certificaat == "nee" or rijbewijs == "nee" or diploma == "nee":
     ResultaatSollicitatie = "Niet"
 
-elif certificaat2 <= 4 or certificaat3 <= 5 or certificaat4 <= 3:
+elif certificaat2 < 3 or certificaat3 <= 4 and certificaat4 <= 2:
     ResultaatSollicitatie = "Niet"
 
 if geslacht == "man":
@@ -36,6 +36,7 @@ if ondernemer <= 3 and werknemers <= 5:
 
 if ResultaatSollicitatie == "Wel":
     print(f"Hallo {Naam}, u bent {ResultaatSollicitatie} aangenomen.")
+
 elif ResultaatSollicitatie == "Niet":
      print(f"Hallo {Naam}, u bent {ResultaatSollicitatie} aangenomen want.")
      if Gewicht == "nee":
@@ -50,11 +51,11 @@ elif ResultaatSollicitatie == "Niet":
          print("u heeft geen MBO-4 Diploma")
      if certificaat == "nee":
          print("U heeft geen certificaat Overleven met gevaarlijk persoon")
-     if certificaat2 <= 4:
+     if certificaat2 < 4:
          print("U heeft niet genoeg jaar praktijkervaring met dieren-dressuur")
-     if certificaat3 <= 5:
+     if certificaat3 < 5:
          print("U heeft niet genoeg jaar ervaring met jongleren")
-     if certificaat4 <= 3:
+     if certificaat4 < 3:
          print("U heeft niet genoeg jaar praktijkervaring met acrobatiek")
      if geslacht == "man" and snor == "nee":
          print("Uw snor is kleiner dan 10cm")
