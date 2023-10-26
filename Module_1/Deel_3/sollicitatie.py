@@ -39,7 +39,7 @@ elif geslacht == "anders":
     lach = int(input("Hoe breed is uw lach? "))
     if lach < LACH_MIN:
         ResultaatSollicitatie = "Niet"
-if ondernemer <= 3 and werknemers <= 5:
+if ondernemer <= 3 or werknemers <= 5:
     ResultaatSollicitatie = "Niet"
 
 if ResultaatSollicitatie == "Wel":
@@ -65,9 +65,12 @@ elif ResultaatSollicitatie == "Niet":
          print("U heeft niet genoeg jaar ervaring met jongleren")
      if certificaat4 < 3:
          print("U heeft niet genoeg jaar praktijkervaring met acrobatiek")
-     if geslacht == "man" and snor < SNOR_MIN:
-         print("Uw snor is kleiner dan 10cm")
-     if geslacht == "vrouw" and haar < HAAR_MIN or haar == "nee":
-         print("Uw haar is korter dan 20cm of niet rood")
-     if geslacht == "anders" and lach < LACH_MIN:
-         print ("Uw lach is minder breed dan 10cm")
+     if geslacht == "man":
+        if geslacht == "man" and snor < SNOR_MIN:
+            print("Uw snor is kleiner dan 10cm")
+     if geslacht == "vrouw":
+        if geslacht == "vrouw" and haar < HAAR_MIN or haar == "nee":
+            print("Uw haar is korter dan 20cm of niet rood")
+     if geslacht == "anders":
+         if geslacht == "anders" and lach < LACH_MIN:
+             print ("Uw lach is minder breed dan 10cm")
