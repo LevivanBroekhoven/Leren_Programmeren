@@ -5,14 +5,17 @@ try:
     PizzaAantalsmall = int(input(f"hoeveel small pizza's wilt u? "))
 except:
     print("je kan geen halve pizza's kopen")
+    PizzaAantalsmall = 0
 try:
     PizzaAantalmedium = int(input(f"hoeveel medium pizza's wilt u? "))
 except:
     print("je kan geen halve pizza's kopen")
+    PizzaAantalmedium = 0
 try:
     PizzaAantallarge = int(input(f"hoeveel large pizza's wilt u? "))
 except:
     print("je kan geen halve pizza's kopen")
+    PizzaAantallarge = 0
 
 prijs_small  = PizzaAantalsmall   * prijzen["small"]
 prijs_medium = PizzaAantalmedium  * prijzen["medium"]
