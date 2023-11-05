@@ -24,7 +24,7 @@ result2 = divide(nr4, 26)
 test('divide',result1, result2)
 
 result1 = (nr4 + nr1) / (nr3 - nr2)
-result2 = None
+result2 = divide(82, 26)
 test('divide',result1, result2)
 
 result1 = nr1 + nr2 + nr3
