@@ -4,13 +4,8 @@ def afronden(Bedrag):
 
 
 
-
-
-
-
 Bedrag = 62.63
-NieuwBedrag = afronden(Bedrag)
+afgerond_Bedrag = afronden(Bedrag)
 
-print (NieuwBedrag)
+print (afgerond_Bedrag) 
 
-print("Dit is een test", round(76.63 * 100 / 5) * 5 /100)
