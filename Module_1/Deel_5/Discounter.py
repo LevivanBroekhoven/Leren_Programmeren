@@ -28,4 +28,5 @@ excepted = 30.00
 calculate = calc_discount (300, "Kymco" , month_discount_brands)
 test ("Kymco", excepted , calculate)
 
+
 report()

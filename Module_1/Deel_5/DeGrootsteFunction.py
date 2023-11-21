@@ -1,4 +1,4 @@
-def GroterGetal(nr1, nr2):
+def GroterGetal(nr1: float, nr2: float) -> float:
       if nr1 == nr2:
         return 'Beide getallen zijn even groot'
       elif nr1 > nr2:
