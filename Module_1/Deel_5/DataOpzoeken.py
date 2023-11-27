@@ -5,7 +5,7 @@ def get_value(data: str, separator: str, position: int) -> str:
     else:
         return "Position out of range"
 
-resultaat = get_value("Muis,Kat,Hond,Rat,Hamster", ",", 2)
+resultaat = get_value("Muis,Kat,Hond,Rat,Hamster", ",", 0   )
 print(resultaat)
 
 

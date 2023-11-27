@@ -19,7 +19,7 @@ def BerekenEgoScore(sub_sentences: list) -> int:
    return ego_score
    
 sub_sentences = split_sentence(text)
-result_ego_score = BerekenEgoScore(sub_sentences)
+result_ego_score = BerekenEgoScore(sub_sentences)     
  
 print(result_ego_score)
 
