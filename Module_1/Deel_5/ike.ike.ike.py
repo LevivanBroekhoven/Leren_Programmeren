@@ -3,7 +3,9 @@ text = ("Ik wil graag solliciteren naar de functie van programmeur bij uw bedrij
 # replace alle separators "." , ",", " en ", "omdat ", "zodat ", "want ", " wanneer " en "dat ”by a marker "|"
 
 def split_sentence(text: str) -> list: 
+   print(text)
    marked_text = re.sub(r"\.|,|!|\?| en |omdat |zodat |want |wanneer |dat ", "|", text)
+   print (marked_text)
    sub_sentences = marked_text.split("|") # split de text on marker "|"
    return sub_sentences
  
