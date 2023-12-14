@@ -1,0 +1,298 @@
+import time
+import random
+
+skip = 0
+maxhp = 10
+hp = 10
+atk = 0
+dmg = 0
+Day1 = 0
+Day2 = 0
+Day3 = 0
+Day4 = 0
+Day5 = 0
+Day6 = 0
+Day7 = 0
+Day8 = 0 
+Day9 = 0
+Day10 = 0
+
+lijst = ("dag1,dag2")
+
+def monster_list(naam: str) -> str:
+    Monsters = ("Goblin", "Slijm",)
+    random_monster = random.choice(Monsters)
+    return f"{naam} ziet een {random_monster}"
+
+def monster_list_2(naam: str) -> str:
+    Monsters2 = ("Golem", "Trol")
+    random_monster2 = random.choice(Monsters2)
+    return f"{naam} ziet een {random_monster2}"
+
+def monster_list_3(naam: str) -> str:
+    Monsters3 = ("Oni", "")
+    random_monster3 = random.choice(Monsters3)
+    return f"{naam} ziet een {random_monster3}"
+
+def monster_list_hp(hp: str) -> int:
+    Monstershp = ("5","6", "7")
+    random_monsterhp = random.choice(Monstershp)
+    return f"{hp} {random_monsterhp}"
+
+def stat_list() -> str:
+    Stats = ("hp", "atk")
+    random_stat = random.choice(Stats)
+    return random_stat
+
+def attack_list() -> int:
+    attack = (1, 2, 3)
+    damage = random.choice(attack)
+    return damage
+
+def attack_list_u() -> int:
+    attack = (1, 2, 3, 4, 5)
+    damage_u = random.choice(attack)
+    return damage_u
+
+print(input("Druk op enter om te starten"))
+
+uitleg_tof = input("Wil je de uitleg horen? ")
+
+if uitleg_tof.lower() == "ja":
+    print("Dit is een tekst adventure game. Het doel van het spel is om in 10 dagen een character te maken sterk genoeg om de baas te verslaan!")
+    time.sleep(3)
+    skip = 1
+
+if uitleg_tof.lower() == "nee":
+    skip = 1
+
+if skip == 1:
+    while True:
+        name = input("Wat is de naam van je character? ")
+        freestat = input("Je krijgt een bonus +3 voor een stat naar keuze welke kies je? (hp atk) ")
+
+        if freestat.lower() == "hp":
+            maxhp += 3 
+            print("Je hebt hp gekozen")
+        elif freestat.lower() == "atk":
+            atk += 3
+            print("Je hebt atk gekozen")
+        if name and freestat:
+            break
+
+hp = maxhp
+print(hp, atk)
+
+  
+        
+def fight_day():
+    global  hp, atk, day1, maxhp, dmg, damage
+
+    while True:
+        keuze_dag1 = input("Wat wil je vandaag doen? (Vechten, Slapen) ")
+
+        if keuze_dag1.lower() == "vechten":
+            time.sleep(2)
+            print(monster_list(name))
+            time.sleep(2)
+            print("Het monster heeft 7 hp")
+            time.sleep(2)
+            
+            while True:
+                if hp <= 0:
+                    print("Je bent dood GAME OVER!!!")
+                    exit()
+                damage = attack_list()
+                print("Je wordt geraakt voor", damage)
+                hp -= damage
+                print(hp, atk)
+                
+                if hp <= 0:
+                    print("Je bent dood GAME OVER!!!")
+                    exit()
+                    
+                keuze_vecht1 = input("Wat wil je doen (Aanvallen, Rennen) ")
+                
+                if keuze_vecht1.lower() == "aanvallen":
+                    damage_u = attack_list_u()
+                    print("Je valt aan voor", damage_u + atk)
+                    dmg += damage_u + atk
+                    
+                    if dmg >= 7:
+                        print("Je hebt Gewonnen !!")
+                        dmg = 0
+                        day1 = 1
+                        random_stat = stat_list()
+                        
+                        if random_stat.lower() == "hp":
+                            maxhp += 3 
+                            print("Je hebt extra hp gekregen")
+                        elif random_stat.lower() == "atk":
+                            atk += 3
+                            print("Je hebt extra atk gekregen")    
+                            
+                        break
+                    
+                if keuze_vecht1.lower() == "rennen":
+                    print("Je bent weggerend")
+                    time.sleep(2)
+                    print("Einde dag")
+                    day1 = 1
+                    break
+                    
+        if keuze_dag1.lower() == "slapen":
+            hp = maxhp
+            print(hp, atk)
+            print("Je hebt geslapen, je HP is weer naar zijn maximum")
+            day1 = 1
+            break
+            
+        if keuze_dag1:
+            break
+            
+def fight_day1():
+    global  hp, atk, day1, maxhp, dmg, damage
+
+    while True:
+        keuze_dag1 = input("Wat wil je vandaag doen? (Vechten, Slapen) ")
+
+        if keuze_dag1.lower() == "vechten":
+            time.sleep(2)
+            print(monster_list_2(name))
+            time.sleep(2)
+            print("Het monster heeft 9 hp")
+            time.sleep(2)
+            
+            while True:
+                if hp <= 0:
+                    print("Je bent dood GAME OVER!!!")
+                    exit()
+                damage = attack_list()
+                print("Je wordt geraakt voor", damage)
+                hp -= damage
+                print(hp, atk)
+                
+                if hp <= 0:
+                    print("Je bent dood GAME OVER!!!")
+                    exit()
+                    
+                keuze_vecht1 = input("Wat wil je doen (Aanvallen, Rennen) ")
+                
+                if keuze_vecht1.lower() == "aanvallen":
+                    damage_u = attack_list_u()
+                    print("Je valt aan voor", damage_u + atk)
+                    dmg += damage_u + atk
+                    
+                    if dmg >= 9:
+                        print("Je hebt Gewonnen !!")
+                        dmg = 0
+                        day1 = 1
+                        random_stat = stat_list()
+                        
+                        if random_stat.lower() == "hp":
+                            maxhp += 3 
+                            print("Je hebt extra hp gekregen")
+                        elif random_stat.lower() == "atk":
+                            atk += 3
+                            print("Je hebt extra atk gekregen")    
+                            
+                        break
+                    
+                if keuze_vecht1.lower() == "rennen":
+                    print("Je bent weggerend")
+                    time.sleep(2)
+                    print("Einde dag")
+                    day1 = 1
+                    break
+                    
+        if keuze_dag1.lower() == "slapen":
+            hp = maxhp
+            print(hp, atk)
+            print("Je hebt geslapen, je HP is weer naar zijn maximum")
+            day1 = 1
+            break
+            
+        if keuze_dag1:
+            break
+    
+def fight_day2():
+    global  hp, atk, day1, maxhp, dmg, damage
+
+    while True:
+        keuze_dag1 = input("Wat wil je vandaag doen? (Vechten, Slapen) ")
+
+        if keuze_dag1.lower() == "vechten":
+            time.sleep(2)
+            print(monster_list_3(name))
+            time.sleep(2)
+            print("Het monster heeft 17 hp")
+            time.sleep(2)
+            
+            while True:
+                if hp <= 0:
+                    print("Je bent dood GAME OVER!!!")
+                    exit()
+                damage = attack_list()
+                print("Je wordt geraakt voor", damage)
+                hp -= damage
+                print(hp, atk)
+                
+                if hp <= 0:
+                    print("Je bent dood GAME OVER!!!")
+                    exit()
+                    
+                keuze_vecht1 = input("Wat wil je doen (Aanvallen, Rennen) ")
+                
+                if keuze_vecht1.lower() == "aanvallen":
+                    damage_u = attack_list_u()
+                    print("Je valt aan voor", damage_u + atk)
+                    dmg += damage_u + atk
+                    
+                    if dmg >= 17:
+                        print("Je hebt Gewonnen !!")
+                        dmg = 0
+                        day1 = 1
+                        random_stat = stat_list()
+                        
+                        if random_stat.lower() == "hp":
+                            maxhp += 3 
+                            print("Je hebt extra hp gekregen")
+                        elif random_stat.lower() == "atk":
+                            atk += 3
+                            print("Je hebt extra atk gekregen")    
+                            
+                        break
+                    
+                if keuze_vecht1.lower() == "rennen":
+                    print("Je bent weggerend")
+                    time.sleep(2)
+                    print("Einde dag")
+                    day1 = 1
+                    break
+                    
+        if keuze_dag1.lower() == "slapen":
+            hp = maxhp
+            print(hp, atk)
+            print("Je hebt geslapen, je HP is weer naar zijn maximum")
+            day1 = 1
+            break
+            
+        if keuze_dag1:
+            break
+
+
+print("Dag 1")
+for dag in range(1, 3):  
+    fight_day()
+    print(f"Dag {dag + 1}")
+
+for dag in range(3, 6):  
+    fight_day1()
+    print(f"Dag {dag + 1}")
+
+for dag in range(6, 10):  
+    fight_day2()
+    print(f"Dag {dag + 1}")                                                             
+
+        
+
