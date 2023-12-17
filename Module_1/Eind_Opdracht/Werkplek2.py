@@ -34,11 +34,6 @@ def monster_list_3(naam: str) -> str:
     random_monster3 = random.choice(Monsters3)
     return f"{naam} ziet een {random_monster3}"
 
-def monster_list_hp(hp: str) -> int:
-    Monstershp = ("5","6", "7")
-    random_monsterhp = random.choice(Monstershp)
-    return f"{hp} {random_monsterhp}"
-
 def stat_list() -> str:
     Stats = ("hp", "atk")
     random_stat = random.choice(Stats)
