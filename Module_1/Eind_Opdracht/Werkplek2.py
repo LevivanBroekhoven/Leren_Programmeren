@@ -134,6 +134,10 @@ def fight_day():
                     print("Einde dag")
                     day1 = 1
                     break
+
+                if keuze_vecht1.lower() != ("aanvallen") or ("rennen"):
+                    print("dat is geen geldige optie")
+                    
                     
         if keuze_dag1.lower() == "slapen":
             hp = maxhp
@@ -142,8 +146,7 @@ def fight_day():
             day1 = 1
             break
             
-        if keuze_dag1:
-            break
+        
             
 def fight_day1():
     global  hp, atk, day1, maxhp, dmg, damage
@@ -206,9 +209,6 @@ def fight_day1():
             print("Je hebt geslapen, je HP is weer naar zijn maximum")
             day1 = 1
             break
-            
-        if keuze_dag1:
-            break
     
 def fight_day2():
     global  hp, atk, day1, maxhp, dmg, damage
@@ -270,9 +270,6 @@ def fight_day2():
             print(hp, atk)
             print("Je hebt geslapen, je HP is weer naar zijn maximum")
             day1 = 1
-            break
-            
-        if keuze_dag1:
             break
 
 
