@@ -16,6 +16,8 @@ Day7 = 0
 Day8 = 0 
 Day9 = 0
 Day10 = 0
+Day11 = 0
+skill = ("")
 
 lijst = ("dag1,dag2")
 
@@ -30,9 +32,14 @@ def monster_list_2(naam: str) -> str:
     return f"{naam} ziet een {random_monster2}"
 
 def monster_list_3(naam: str) -> str:
-    Monsters3 = ("Oni", "")
+    Monsters3 = ("Oni", "Spook")
     random_monster3 = random.choice(Monsters3)
     return f"{naam} ziet een {random_monster3}"
+
+def Boss_list() -> str:
+    Boss = ("Fire Storm", "Ice Storm")
+    random_Boss = random.choice(Boss)
+    return random_Boss
 
 def stat_list() -> str:
     Stats = ("hp", "atk")
@@ -58,6 +65,11 @@ def attack_list_BOSS() -> int:
     attack = (5, 6, 7, 8, 9, 10)
     damage = random.choice(attack)
     return damage
+
+def skill_list_BOSS() -> str:
+    skill = ("ATCK", "SKILL",)
+    random_skill = random.choice(skill)
+    return {random_skill}
 
 def attack_list_u() -> int:
     attack = (1, 2, 3, 4, 5)
@@ -201,8 +213,7 @@ def fight_day1():
                             print("Je hebt extra hp gekregen")
                         elif random_stat.lower() == "atk":
                             atk += 5
-                            print("Je hebt extra atk gekregen")    
-                            
+                            print("Je hebt extra atk gekregen")        
                         break
                     
                 if keuze_vecht1.lower() == "rennen":
@@ -264,8 +275,7 @@ def fight_day2():
                             print("Je hebt extra hp gekregen")
                         elif random_stat.lower() == "atk":
                             atk += 7
-                            print("Je hebt extra atk gekregen")    
-                            
+                            print("Je hebt extra atk gekregen")     
                         break
                     
                 if keuze_vecht1.lower() == "rennen":
@@ -282,64 +292,76 @@ def fight_day2():
             day1 = 1
             break
             
-    
 def boss_fight():
-    global  hp, atk, day1, maxhp, dmg, damage
+    global hp, atk, day1, maxhp, dmg, damage, skill, random_skill, random_boss
 
     while True:
         keuze_dag1 = input("Wat wil je vandaag doen? (Vechten) ")
 
         if keuze_dag1.lower() == "vechten":
             time.sleep(2)
-            print(monster_list_3(name))
+            random_boss = Boss_list()
+            print(f"je ziet de Bosss {random_boss}")
             time.sleep(2)
-            print("Het monster heeft 50 hp")
+            max_boss_hp = 50 
             time.sleep(2)
-            
+
+            if random_boss == "Fire Storm":
+                print("De Boss heeft 50 hp en kan SKILL Fireball gebruiken")
+            elif random_boss == "Ice Storm":
+                print("De Boss heeft 50 hp en kan SKILL Iceball gebruiken")
+
             while True:
+                random_skill = skill_list_BOSS()
+            
                 if hp <= 0:
                     print("Je bent dood GAME OVER!!!")
                     exit()
-                damage = attack_list_BOSS()
-                print("Je wordt geraakt voor", damage)
-                hp -= damage
-                print(hp, atk)
-                
+                if random_skill == {"ATCK"}:
+                    damage = attack_list_BOSS()
+                    print("Je wordt geraakt voor", damage)
+                    hp -= damage
+                    print(hp, atk)
+                elif random_boss == "Fire Storm" and random_skill == {"SKILL"}:
+                    damage = attack_list_BOSS()
+                    print("Je wordt geraakt voor", damage, "Door een fireball")
+                    hp -= damage
+                    print(hp, atk)
+                elif random_boss == "Ice Storm" and random_skill == {"SKILL"}:
+                    damage = attack_list_BOSS()
+                    print("Je wordt geraakt door SKILL", damage, "Door een Iceball")
+                    hp -= damage
+                    print(hp, atk)
+
                 if hp <= 0:
                     print("Je bent dood GAME OVER!!!")
                     exit()
-                    
+
                 keuze_vecht1 = input("Wat wil je doen (Aanvallen, Rennen) ")
-                
+
                 if keuze_vecht1.lower() == "aanvallen":
                     damage_u = attack_list_u()
                     print("Je valt aan voor", damage_u + atk)
                     dmg += damage_u + atk
-                    
-                    if dmg >= 50:
+
+                    if dmg >= max_boss_hp:
                         print("Je hebt Gewonnen !!")
                         dmg = 0
                         day1 = 1
-                        random_stat = stat_list()
-                        
-                        if random_stat.lower() == "hp":
-                            maxhp += 3 
-                            print("Je hebt extra hp gekregen")
-                        elif random_stat.lower() == "atk":
-                            atk += 3
-                            print("Je hebt extra atk gekregen")    
-                            
-                        break
-                    
+                        print("WIN")
+                        exit()
+
                 if keuze_vecht1.lower() == "rennen":
                     print("Je bent weggerend van de boss ")
                     time.sleep(2)
                     print("Einde dag")
                     day1 = 1
                     break
+
+
+
+
             
-
-
 print("Dag 1")
 for dag in range(1, 3):  
     fight_day()
@@ -349,11 +371,14 @@ for dag in range(3, 6):
     fight_day1()
     print(f"Dag {dag + 1}")
 
-for dag in range(6, 10):  
+for dag in range(6, 11):  
     fight_day2()
     print(f"Dag {dag + 1}")
 
-for dag in range( 11):
-    boss_fight()
+while True:
     print("Boss fight")
+    boss_fight()
+    
+
+
 
