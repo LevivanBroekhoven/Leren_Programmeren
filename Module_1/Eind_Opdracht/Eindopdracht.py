@@ -11,6 +11,8 @@ monster_hp_fase1 = 7
 monster_hp_fase2 = 9
 monster_hp_fase3 = 17
 max_boss_hp = 50
+sleepcount = 0
+attackcount = 0
 
 def monster_list(naam: str) -> str:
     Monsters = ("Goblin", "Slijm",)
@@ -94,7 +96,7 @@ hp = maxhp
 print(f"hp: {hp} atk: {atk}")
      
 def fight_day():
-    global  hp, atk, day1, maxhp, dmg, damage
+    global  hp, atk, day1, maxhp, dmg, damage, attackcount, sleepcount
 
     while True:
         day1 = 0
@@ -131,6 +133,7 @@ def fight_day():
                         print("Je hebt Gewonnen !!")
                         dmg = 0
                         day1 = 1
+                        attackcount =+ 1
                         random_stat = stat_list()
                         
                         if random_stat.lower() == "hp":
@@ -153,6 +156,7 @@ def fight_day():
             print(f"hp: {hp} atk: {atk}")
             print("Je hebt geslapen, je HP is weer naar zijn maximum")
             day1 = 1
+            sleepcount =+ 1
             break
         if day1 == 1:
             day1 = 0
@@ -161,7 +165,7 @@ def fight_day():
             
             
 def fight_day1():
-    global  hp, atk, day1, maxhp, dmg, damage
+    global  hp, atk, day1, maxhp, dmg, damage, sleepcount, attackcount
 
     while True:
         day1 = 0
@@ -198,6 +202,7 @@ def fight_day1():
                         print("Je hebt Gewonnen !!")
                         dmg = 0
                         day1 = 1
+                        attackcount =+ 1
                         random_stat = stat_list()
                         
                         if random_stat.lower() == "hp":
@@ -217,6 +222,7 @@ def fight_day1():
                     
         if keuze_dag1.lower() == "slapen":
             hp = maxhp
+            sleepcount =+ 1
             print(f"hp: {hp} atk: {atk}")
             print("Je hebt geslapen, je HP is weer naar zijn maximum")
             day1 = 1
@@ -228,7 +234,7 @@ def fight_day1():
             
     
 def fight_day2():
-    global  hp, atk, day1, maxhp, dmg, damage
+    global  hp, atk, day1, maxhp, dmg, damage, sleepcount, attackcount
 
     while True:
         day1 = 0
@@ -265,6 +271,7 @@ def fight_day2():
                         print("Je hebt Gewonnen !!")
                         dmg = 0
                         day1 = 1
+                        attackcount =+ 1
                         random_stat = stat_list()
                         
                         if random_stat.lower() == "hp":
@@ -284,6 +291,7 @@ def fight_day2():
                     
         if keuze_dag1.lower() == "slapen":
             hp = maxhp
+            sleepcount += 1
             print(f"hp: {hp} atk: {atk}")
             print("Je hebt geslapen, je HP is weer naar zijn maximum")
             day1 = 1
@@ -307,9 +315,9 @@ def boss_fight():
             time.sleep(2) 
 
             if random_boss == "Fire Storm":
-                print("De Boss heeft 50 hp en kan SKILL Fireball gebruiken")
+                print("De Boss heeft 50 hp en kan de SKILL Fireball gebruiken")
             elif random_boss == "Ice Storm":
-                print("De Boss heeft 50 hp en kan SKILL Iceball gebruiken")
+                print("De Boss heeft 50 hp en kan de SKILL Iceball gebruiken")
 
             while True:
                 random_skill = skill_list_BOSS()
@@ -348,7 +356,8 @@ def boss_fight():
                         print("Je hebt Gewonnen !!")
                         dmg = 0
                         day1 = 1
-                        print("WIN")
+                        print(f"Je hebt de Boss verslagen met{maxhp} hp en {atk} atk ")
+                        print(f"je heb {sleepcount} geslapen en {attackcount} gevochten")
                         exit()
 
                 if keuze_vecht1.lower() == "rennen":
@@ -378,7 +387,3 @@ for dag in range(6, 11):
 while True:
     print("Boss fight")
     boss_fight()
-    
-
-
-
