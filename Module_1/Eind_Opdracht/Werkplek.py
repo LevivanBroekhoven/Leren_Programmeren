@@ -7,19 +7,10 @@ hp = 10
 atk = 0
 dmg = 0
 day1 = 0
-Day2 = 0
-Day3 = 0
-Day4 = 0
-Day5 = 0
-Day6 = 0
-Day7 = 0
-Day8 = 0    
-Day9 = 0
-Day10 = 0
-Day11 = 0
-skill = ("")
-
-lijst = ("dag1,dag2")
+monster_hp_fase1 = 7
+monster_hp_fase2 = 9
+monster_hp_fase3 = 17
+max_boss_hp = 50
 
 def monster_list(naam: str) -> str:
     Monsters = ("Goblin", "Slijm",)
@@ -66,6 +57,11 @@ def attack_list_BOSS() -> int:
     damage = random.choice(attack)
     return damage
 
+def attack_skill_list_BOSS() -> int:
+    attack = (7, 8, 9, 10, 11, 12, 13)
+    damage = random.choice(attack)
+    return damage
+
 def skill_list_BOSS() -> str:
     skill = ("ATCK", "SKILL",)
     random_skill = random.choice(skill)
@@ -78,35 +74,25 @@ def attack_list_u() -> int:
 
 print(input("Druk op enter om te starten"))
 
-uitleg_tof = input("Wil je de uitleg horen? ")
+print("Dit is een tekst adventure game. Het doel van het spel is om in 10 dagen een character te maken sterk genoeg om de baas te verslaan!")
+time.sleep(2)
 
-if uitleg_tof.lower() == "ja":
-    print("Dit is een tekst adventure game. Het doel van het spel is om in 10 dagen een character te maken sterk genoeg om de baas te verslaan!")
-    time.sleep(3)
-    skip = 1
+while True:
+    name = input("Wat is de naam van je character? ")
+    freestat = input("Je krijgt een bonus +3 voor een stat naar keuze welke kies je? (hp atk) ")
 
-if uitleg_tof.lower() == "nee":
-    skip = 1
-
-if skip == 1:
-    while True:
-        name = input("Wat is de naam van je character? ")
-        freestat = input("Je krijgt een bonus +3 voor een stat naar keuze welke kies je? (hp atk) ")
-
-        if freestat.lower() == "hp":
-            maxhp += 3 
-            print("Je hebt hp gekozen")
-        elif freestat.lower() == "atk":
-            atk += 3
-            print("Je hebt atk gekozen")
-        if name and freestat:
-            break
-
+    if freestat.lower() == "hp":
+        maxhp += 3 
+        print("Je hebt hp gekozen")
+        break
+    elif freestat.lower() == "atk":
+        atk += 3
+        print("Je hebt atk gekozen")
+        break
+       
 hp = maxhp
 print(f"hp: {hp} atk: {atk}")
-
-  
-        
+     
 def fight_day():
     global  hp, atk, day1, maxhp, dmg, damage
 
@@ -141,7 +127,7 @@ def fight_day():
                     print("Je valt aan voor", damage_u + atk)
                     dmg += damage_u + atk
                     
-                    if dmg >= 7:
+                    if dmg >= monster_hp_fase1:
                         print("Je hebt Gewonnen !!")
                         dmg = 0
                         day1 = 1
@@ -208,7 +194,7 @@ def fight_day1():
                     print("Je valt aan voor", damage_u + atk)
                     dmg += damage_u + atk
                     
-                    if dmg >= 9:
+                    if dmg >= monster_hp_fase2:
                         print("Je hebt Gewonnen !!")
                         dmg = 0
                         day1 = 1
@@ -275,7 +261,7 @@ def fight_day2():
                     print("Je valt aan voor", damage_u + atk)
                     dmg += damage_u + atk
                     
-                    if dmg >= 17:
+                    if dmg >= monster_hp_fase3:
                         print("Je hebt Gewonnen !!")
                         dmg = 0
                         day1 = 1
@@ -308,7 +294,7 @@ def fight_day2():
        
             
 def boss_fight():
-    global hp, atk, day1, maxhp, dmg, damage, skill, random_skill, random_boss
+    global hp, atk, day1, maxhp, dmg, damage, random_skill, random_boss
 
     while True:
         day1 = 0
@@ -317,10 +303,8 @@ def boss_fight():
         if keuze_dag1.lower() == "vechten":
             time.sleep(2)
             random_boss = Boss_list()
-            print(f"je ziet de Bosss {random_boss}")
-            time.sleep(2)
-            max_boss_hp = 50 
-            time.sleep(2)
+            print(f"je ziet de Boss {random_boss}")
+            time.sleep(2) 
 
             if random_boss == "Fire Storm":
                 print("De Boss heeft 50 hp en kan SKILL Fireball gebruiken")
@@ -339,13 +323,13 @@ def boss_fight():
                     hp -= damage
                     print(f"hp: {hp} atk: {atk}")
                 elif random_boss == "Fire Storm" and random_skill == {"SKILL"}:
-                    damage = attack_list_BOSS()
+                    damage = attack_skill_list_BOSS()
                     print("Je wordt geraakt voor", damage, "Door een fireball")
                     hp -= damage
                     print(f"hp: {hp} atk: {atk}")
                 elif random_boss == "Ice Storm" and random_skill == {"SKILL"}:
-                    damage = attack_list_BOSS()
-                    print("Je wordt geraakt door SKILL", damage, "Door een Iceball")
+                    damage = attack_skill_list_BOSS()
+                    print("Je wordt geraakt door voor", damage, "Door een Iceball")
                     hp -= damage
                     print(f"hp: {hp} atk: {atk}")
 
