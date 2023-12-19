@@ -285,6 +285,3 @@ for dag in range(3, 6):
 for dag in range(6, 10):  
     fight_day2()
     print(f"Dag {dag + 1}")                                                             
-
-        
-

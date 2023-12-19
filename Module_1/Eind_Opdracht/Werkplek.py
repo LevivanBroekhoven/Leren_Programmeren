@@ -6,14 +6,14 @@ maxhp = 10
 hp = 10
 atk = 0
 dmg = 0
-Day1 = 0
+day1 = 0
 Day2 = 0
 Day3 = 0
 Day4 = 0
 Day5 = 0
 Day6 = 0
 Day7 = 0
-Day8 = 0 
+Day8 = 0    
 Day9 = 0
 Day10 = 0
 Day11 = 0
@@ -111,6 +111,7 @@ def fight_day():
     global  hp, atk, day1, maxhp, dmg, damage
 
     while True:
+        day1 = 0
         keuze_dag1 = input("Wat wil je vandaag doen? (Vechten, Slapen) ")
 
         if keuze_dag1.lower() == "vechten":
@@ -152,7 +153,6 @@ def fight_day():
                         elif random_stat.lower() == "atk":
                             atk += 3
                             print("Je hebt extra atk gekregen")
-
                         break
                     
                 if keuze_vecht1.lower() == "rennen":
@@ -168,6 +168,9 @@ def fight_day():
             print("Je hebt geslapen, je HP is weer naar zijn maximum")
             day1 = 1
             break
+        if day1 == 1:
+            day1 = 0
+            break
            
             
             
@@ -175,6 +178,7 @@ def fight_day1():
     global  hp, atk, day1, maxhp, dmg, damage
 
     while True:
+        day1 = 0
         keuze_dag1 = input("Wat wil je vandaag doen? (Vechten, Slapen) ")
 
         if keuze_dag1.lower() == "vechten":
@@ -231,6 +235,9 @@ def fight_day1():
             print("Je hebt geslapen, je HP is weer naar zijn maximum")
             day1 = 1
             break
+        if day1 == 1:
+            day1 = 0
+            break
         
             
     
@@ -238,6 +245,7 @@ def fight_day2():
     global  hp, atk, day1, maxhp, dmg, damage
 
     while True:
+        day1 = 0
         keuze_dag1 = input("Wat wil je vandaag doen? (Vechten, Slapen) ")
 
         if keuze_dag1.lower() == "vechten":
@@ -294,12 +302,16 @@ def fight_day2():
             print("Je hebt geslapen, je HP is weer naar zijn maximum")
             day1 = 1
             break
+        if day1 == 1:
+            day1 = 0
+            break
        
             
 def boss_fight():
     global hp, atk, day1, maxhp, dmg, damage, skill, random_skill, random_boss
 
     while True:
+        day1 = 0
         keuze_dag1 = input("Wat wil je vandaag doen? (Vechten) ")
 
         if keuze_dag1.lower() == "vechten":
@@ -362,15 +374,10 @@ def boss_fight():
                     day1 = 1
                     break
 
-                
-                
-
-                
-
-
-
-
-            
+                if day1 == 1:
+                    day1 = 0
+                    break
+          
 print("Dag 1")
 for dag in range(1, 3):  
     fight_day()
