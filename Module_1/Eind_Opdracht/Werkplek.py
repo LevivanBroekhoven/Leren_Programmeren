@@ -103,7 +103,7 @@ if skip == 1:
             break
 
 hp = maxhp
-print(hp, atk)
+print(f"hp: {hp} atk: {atk}")
 
   
         
@@ -127,7 +127,7 @@ def fight_day():
                 damage = attack_list()
                 print("Je wordt geraakt voor", damage)
                 hp -= damage
-                print(hp, atk)
+                print(f"hp: {hp} atk: {atk}")
 
                 if hp <= 0:
                     print("Je bent dood GAME OVER!!!")
@@ -151,7 +151,8 @@ def fight_day():
                             print("Je hebt extra hp gekregen")
                         elif random_stat.lower() == "atk":
                             atk += 3
-                            print("Je hebt extra atk gekregen")    
+                            print("Je hebt extra atk gekregen")
+
                         break
                     
                 if keuze_vecht1.lower() == "rennen":
@@ -160,13 +161,14 @@ def fight_day():
                     print("Einde dag")
                     day1 = 1
                     break
-                    
+
         if keuze_dag1.lower() == "slapen":
             hp = maxhp
-            print(hp, atk)
+            print(f"hp: {hp} atk: {atk}")
             print("Je hebt geslapen, je HP is weer naar zijn maximum")
             day1 = 1
             break
+           
             
             
 def fight_day1():
@@ -189,7 +191,7 @@ def fight_day1():
                 damage = attack_list2()
                 print("Je wordt geraakt voor", damage)
                 hp -= damage
-                print(hp, atk)
+                print(f"hp: {hp} atk: {atk}")
                 
                 if hp <= 0:
                     print("Je bent dood GAME OVER!!!")
@@ -225,10 +227,11 @@ def fight_day1():
                     
         if keuze_dag1.lower() == "slapen":
             hp = maxhp
-            print(hp, atk)
+            print(f"hp: {hp} atk: {atk}")
             print("Je hebt geslapen, je HP is weer naar zijn maximum")
             day1 = 1
             break
+        
             
     
 def fight_day2():
@@ -251,7 +254,7 @@ def fight_day2():
                 damage = attack_list3()
                 print("Je wordt geraakt voor", damage)
                 hp -= damage
-                print(hp, atk)
+                print(f"hp: {hp} atk: {atk}")
                 
                 if hp <= 0:
                     print("Je bent dood GAME OVER!!!")
@@ -287,10 +290,11 @@ def fight_day2():
                     
         if keuze_dag1.lower() == "slapen":
             hp = maxhp
-            print(hp, atk)
+            print(f"hp: {hp} atk: {atk}")
             print("Je hebt geslapen, je HP is weer naar zijn maximum")
             day1 = 1
             break
+       
             
 def boss_fight():
     global hp, atk, day1, maxhp, dmg, damage, skill, random_skill, random_boss
@@ -321,17 +325,17 @@ def boss_fight():
                     damage = attack_list_BOSS()
                     print("Je wordt geraakt voor", damage)
                     hp -= damage
-                    print(hp, atk)
+                    print(f"hp: {hp} atk: {atk}")
                 elif random_boss == "Fire Storm" and random_skill == {"SKILL"}:
                     damage = attack_list_BOSS()
                     print("Je wordt geraakt voor", damage, "Door een fireball")
                     hp -= damage
-                    print(hp, atk)
+                    print(f"hp: {hp} atk: {atk}")
                 elif random_boss == "Ice Storm" and random_skill == {"SKILL"}:
                     damage = attack_list_BOSS()
                     print("Je wordt geraakt door SKILL", damage, "Door een Iceball")
                     hp -= damage
-                    print(hp, atk)
+                    print(f"hp: {hp} atk: {atk}")
 
                 if hp <= 0:
                     print("Je bent dood GAME OVER!!!")
@@ -357,6 +361,11 @@ def boss_fight():
                     print("Einde dag")
                     day1 = 1
                     break
+
+                
+                
+
+                
 
 
 

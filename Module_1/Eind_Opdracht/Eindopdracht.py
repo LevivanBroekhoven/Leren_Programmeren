@@ -94,19 +94,24 @@ while True:
             print("Je wordt geraakt voor", damage)
             hp -= damage
             print(hp, atk)
+
             if hp <= 0:
                 print("Je bent dood GAME OVER!!!")
                 exit()
+
             keuze_vecht1 = input("Wat wil je doen (Aanvallen, Rennen) ")
+
             if keuze_vecht1.lower() == "aanvallen":
                 damage_u = attack_list_u()
                 print("Je valt aan voor", damage_u + atk)
                 dmg += damage_u + atk
+
                 if dmg >= 7:
                     print("Je hebt Gewonnen !!")
                     dmg = 0
                     day1 = 1
                     random_stat = stat_list()
+
                     if random_stat.lower() == "hp":
                         maxhp += 3 
                         print("Je hebt extra hp gekregen")
@@ -114,6 +119,7 @@ while True:
                         atk += 3
                         print("Je hebt extra atk gekregen")    
                     break
+                
             if keuze_vecht1.lower() == "rennen":
                 day1 = 1
                 break
