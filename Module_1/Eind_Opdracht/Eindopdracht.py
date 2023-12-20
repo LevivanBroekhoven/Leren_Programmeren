@@ -161,9 +161,7 @@ def fight_day():
         if day1 == 1:
             day1 = 0
             break
-           
-            
-            
+                      
 def fight_day1():
     global  hp, atk, day1, maxhp, dmg, damage, sleepcount, attackcount
 
@@ -231,8 +229,6 @@ def fight_day1():
             day1 = 0
             break
         
-            
-    
 def fight_day2():
     global  hp, atk, day1, maxhp, dmg, damage, sleepcount, attackcount
 
@@ -299,8 +295,7 @@ def fight_day2():
         if day1 == 1:
             day1 = 0
             break
-       
-            
+                  
 def boss_fight():
     global hp, atk, day1, maxhp, dmg, damage, random_skill, random_boss
 
@@ -356,8 +351,8 @@ def boss_fight():
                         print("Je hebt Gewonnen !!")
                         dmg = 0
                         day1 = 1
-                        print(f"Je hebt de Boss verslagen met{maxhp} hp en {atk} atk ")
-                        print(f"je heb {sleepcount} geslapen en {attackcount} gevochten")
+                        print(f"Je hebt de Boss verslagen met {maxhp} hp en {atk} atk ")
+                        print(f"je heb {sleepcount} keer geslapen en {attackcount} keer gevochten")
                         exit()
 
                 if keuze_vecht1.lower() == "rennen":
@@ -365,25 +360,25 @@ def boss_fight():
                     time.sleep(2)
                     print("Einde dag")
                     day1 = 1
-                    break
+                    exit()
 
                 if day1 == 1:
                     day1 = 0
                     break
           
 print("Dag 1")
-for dag in range(1, 3):  
+for dag in range(1, 4):  
     fight_day()
     print(f"Dag {dag + 1}")
 
-for dag in range(3, 6):  
+for dag in range(4, 7):  
     fight_day1()
     print(f"Dag {dag + 1}")
-
-for dag in range(6, 11):  
+    
+for dag in range(7, 11):  
     fight_day2()
     print(f"Dag {dag + 1}")
-
+    
 while True:
     print("Boss fight")
     boss_fight()
