@@ -44,6 +44,8 @@ def attack_list() -> int:
     damage = random.choice(attack)
     return damage
 
+random.randint(1, 5)
+
 def attack_list2() -> int:
     attack = (1, 2, 3, 4, 5)
     damage = random.choice(attack)
