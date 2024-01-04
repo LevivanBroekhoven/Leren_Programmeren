@@ -1,16 +1,3 @@
-# Dagentuple  =("Maandag","Dinsdag","Woensdag","Donderdag","Vrijdag","Zaterdag","Zondag")
-# WerkDagen = Dagentuple[:5]
-# WeekendDagen = Dagentuple[5:]
-
-
-
-# print (Dagentuple)
-# print (WerkDagen)
-# print (WeekendDagen)
-# print (Dagentuple[::-1])
-# print (WerkDagen[::-1])
-# print (WeekendDagen[::-1])
-
 Dagentuple = ("Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag")
 WerkDagen = Dagentuple[:5]
 WeekendDagen = Dagentuple[5:]
