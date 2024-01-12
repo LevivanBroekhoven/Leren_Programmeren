@@ -353,7 +353,7 @@ def boss_fight():
                         print("Je hebt Gewonnen !!")
                         dmg = 0
                         day1 = 1
-                        print(f"Je hebt de Boss verslagen met {maxhp} hp en {atk} atk ")
+                        print(f"Je hebt de Boss verslagen met als max stats {maxhp} hp en {atk} atk ")
                         print(f"je heb {sleepcount} keer geslapen en {attackcount} keer gevochten")
                         exit()
 
