@@ -44,8 +44,6 @@ def attack_list() -> int:
     damage = random.choice(attack)
     return damage
 
-random.randint(1, 5)
-
 def attack_list2() -> int:
     attack = (1, 2, 3, 4, 5)
     damage = random.choice(attack)
@@ -360,7 +358,7 @@ def boss_fight():
                 if keuze_vecht1.lower() == "rennen":
                     print("Je bent weggerend van de boss ")
                     time.sleep(2)
-                    print("Einde dag")
+                    print("Game Over")
                     day1 = 1
                     exit()
 
