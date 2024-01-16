@@ -133,7 +133,7 @@ def fight_day():
                         print("Je hebt Gewonnen !!")
                         dmg = 0
                         day1 = 1
-                        attackcount =+ 1
+                        attackcount += 1
                         random_stat = stat_list()
                         
                         if random_stat.lower() == "hp":
@@ -153,6 +153,7 @@ def fight_day():
 
         if keuze_dag1.lower() == "slapen":
             hp = maxhp
+            sleepcount += 1
             print(f"hp: {hp} atk: {atk}")
             print("Je hebt geslapen, je HP is weer naar zijn maximum")
             day1 = 1
@@ -200,7 +201,7 @@ def fight_day1():
                         print("Je hebt Gewonnen !!")
                         dmg = 0
                         day1 = 1
-                        attackcount =+ 1
+                        attackcount += 1
                         random_stat = stat_list()
                         
                         if random_stat.lower() == "hp":
@@ -220,7 +221,7 @@ def fight_day1():
                     
         if keuze_dag1.lower() == "slapen":
             hp = maxhp
-            sleepcount =+ 1
+            sleepcount += 1
             print(f"hp: {hp} atk: {atk}")
             print("Je hebt geslapen, je HP is weer naar zijn maximum")
             day1 = 1
@@ -267,7 +268,7 @@ def fight_day2():
                         print("Je hebt Gewonnen !!")
                         dmg = 0
                         day1 = 1
-                        attackcount =+ 1
+                        attackcount += 1
                         random_stat = stat_list()
                         
                         if random_stat.lower() == "hp":
