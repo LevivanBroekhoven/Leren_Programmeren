@@ -320,6 +320,8 @@ def boss_fight():
             
                 if hp <= 0:
                     print("Je bent dood GAME OVER!!!")
+                    DamgeToBoss = (max_boss_hp - dmg)
+                    print(f"De boss had nog {DamgeToBoss} HP")
                     exit()
                 if random_skill == {"ATCK"}:
                     damage = attack_list_BOSS()
@@ -339,6 +341,8 @@ def boss_fight():
 
                 if hp <= 0:
                     print("Je bent dood GAME OVER!!!")
+                    DamgeToBoss = (max_boss_hp - dmg)
+                    print(f"De boss had nog {DamgeToBoss} HP")
                     exit()
 
                 keuze_vecht1 = input("Wat wil je doen (Aanvallen, Rennen) ")
