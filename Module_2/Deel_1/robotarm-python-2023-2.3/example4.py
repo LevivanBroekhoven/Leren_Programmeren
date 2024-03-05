@@ -12,7 +12,6 @@ for x in range(5):
         for z in range (2):
             robotArm.moveLeft()
 
-
 for x in range(4):
     robotArm.grab()
     for a in range(1):
@@ -20,7 +19,6 @@ for x in range(4):
     robotArm.drop()
     for b in range (1):
         robotArm.moveRight()
-
 
 robotArm.grab()
 for v in range(1):
