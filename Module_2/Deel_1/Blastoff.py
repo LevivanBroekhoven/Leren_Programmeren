@@ -1,5 +1,7 @@
-for x in range (1,31)[::-1]:
+from time import sleep
+for x in range(30,0,1):
+    sleep(0.5)
     print (x)
-    #Sleep is mogelijk zodat het aftellen langzamer gaat#
 
 print("de raket is gelanceerd")
+

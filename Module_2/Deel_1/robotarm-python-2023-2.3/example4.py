@@ -3,28 +3,29 @@ from RobotArm import RobotArm
 robotArm = RobotArm('exercise 4')
 
 # Jouw python instructies zet je vanaf hier:
-for x in range(5):
+for x in range(4):  #pakt 4 blokken en beweegt ze 2x naar rechts en droped ze daar
     robotArm.grab()
     for y in range(2):
         robotArm.moveRight()
-    robotArm.drop()
+    robotArm.drop()    
     if x < 4:
         for z in range (2):
             robotArm.moveLeft()
+# pak blok beweeg naar rechts en drop blok
+robotArm.grab()
+robotArm.moveRight()
+robotArm.drop()
+robotArm.moveRight()
 
+# stapel op regel 3 naar regel 2 verplaatsen
 for x in range(4):
     robotArm.grab()
-    for a in range(1):
-        robotArm.moveLeft()
-    robotArm.drop()
-    for b in range (1):
-        robotArm.moveRight()
-
-robotArm.grab()
-for v in range(1):
     robotArm.moveLeft()
     robotArm.drop()
+    if x < 3:
+        robotArm.moveRight()
 
+    
 
 
 
