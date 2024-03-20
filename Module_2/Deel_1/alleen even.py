@@ -1,2 +1,2 @@
-for getal in range(31,61,3):
+for getal in range(20,51,2):
     print(f"{getal} is even")
