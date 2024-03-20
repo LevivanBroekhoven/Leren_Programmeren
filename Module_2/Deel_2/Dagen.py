@@ -6,7 +6,7 @@ WeekendDagen = Dagentuple[5:]
 print("Alle dagen van de week zijn:", end=" ")
 for x in Dagentuple:
     print(x, end=", ")
-print("\n")
+print("\n") 
 
 print("De werkdagen zijn:", end=" ")
 for x in WerkDagen:

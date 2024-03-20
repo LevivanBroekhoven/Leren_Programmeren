@@ -11,10 +11,10 @@ for a in kleuren:
 Deck.append("joker")
 Deck.append("joker")
 random.shuffle(Deck)
-
+print(Deck)
 for x in range(1,8):
     jouw_Deck = Deck.pop(0)
-    print(f" Kaart {x} {jouw_Deck}")
+    print(f" Kaart {x} {jouw_Deck}") 
 
 print("\n")
 print("Deck (47 kaarten):", Deck) 
