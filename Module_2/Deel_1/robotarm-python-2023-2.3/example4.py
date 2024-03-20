@@ -3,7 +3,8 @@ from RobotArm import RobotArm
 robotArm = RobotArm('exercise 4')
 
 # Jouw python instructies zet je vanaf hier:
-for x in range(4):  #pakt 4 blokken en beweegt ze 2x naar rechts en droped ze daar
+#pakt 4 blokken en beweegt ze 2x naar rechts en droped ze daar
+for x in range(4):  
     robotArm.grab()
     for y in range(2):
         robotArm.moveRight()
