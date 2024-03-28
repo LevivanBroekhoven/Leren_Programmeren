@@ -42,7 +42,10 @@ def aantal_even_getallen(lijst: list) -> int:
     return hoeveel
 
 def is_palindroom(woord: str) -> bool:
-    return False
+    letter1 = woord[0] 
+    letter2 = woord[-1]
+    if letter1 == letter2:
+        return True
 
 def omgedraaid(lijst: list) -> list:
     a = lijst[:: -1]
@@ -77,7 +80,6 @@ expected = False
 result = is_even(7)
 test('Opdracht 1a (test 4) is correct', expected, result)
 # haal deze regel uit commentaar om de uitslag te laten zien. (en verplaats de regel naar je volgende opdracht)
-report()
 
 # vraag 1b
 # Zorg ervoor dat de functie get_even_list() enkel de even getallen uit de lijst teruggeeft.
@@ -138,7 +140,6 @@ test('Opdracht 4 (test 1) is correct', expected, result)
 expected = [1, 2, 3, 4, 5, 6]
 result = lijsten_samenvoegen([1, 2, 3],  [4, 5, 6])
 test('Opdracht 5 (test 1) is correct', expected, result)
-report()
 
 # vraag 6
 # Schrijf een functie die true teruggeeft als een woord een palindroom is. (voorbeelden hiervan zijn: anna, lepel, parterretrap)
@@ -154,6 +155,7 @@ expected = 3
 result = aantal_palindromen(['anna', 'lepel', 'developer', 'parterretrap', 'test'])
 test('Opdracht 7 (test 1) is correct', expected, result)
 
+report()
 # vraag 8
 # Breinkraker: hoeveel even getallen bevinden zich op een even index in de lijst? (index  0 is ook even)
 # voeg 2 testen toe!
