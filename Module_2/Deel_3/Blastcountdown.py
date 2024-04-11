@@ -6,4 +6,4 @@ while x != 0:
     x -= 1
     sleep(1)
 
-print("de raket is gelanceerd")
+print("de raket is gelanceerd") 

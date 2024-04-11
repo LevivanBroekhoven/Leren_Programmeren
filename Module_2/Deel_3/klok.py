@@ -12,7 +12,7 @@
 #         if tijd == 24:
 #             y = "AM"  
 #         print(f"{tijd - 12} {y}")
-
+ 
 tijd = 0
 
 while tijd < 24:

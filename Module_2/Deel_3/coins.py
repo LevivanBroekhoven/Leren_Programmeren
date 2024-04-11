@@ -9,7 +9,8 @@ toPay = int(float(input('Amount to pay: '))* 100) # een input voor hoeveel er be
 paid = int(float(input('Paid amount: ')) * 100) # een input voor hoeveel er is betaalt * 100
 change = paid - toPay # berekent hoeveel geld je terug krijgt
 Returned = [] 
-
+Amount = []
+ 
 while change > 0 and len(coinValues) > 0: # zolang Change groter is dan 0 en de lengte van de lijst coinValues groter is dan 0
 
   coinValue = coinValues.pop(0) # haalt de eerste uit de list
@@ -18,8 +19,10 @@ while change > 0 and len(coinValues) > 0: # zolang Change groter is dan 0 en de 
   if nrCoins > 0: # als NrCoins groter is dan 0
     print('return maximal ', nrCoins, ' coins of ', coinValue, ' cents!' ) # print text met de variable nrCoins en coinValue erin
     nrCoinsReturned = int(input('How many coins of ' + str(coinValue) +  ' cents did you return? '))   # Variable die vraagt hoeveel muntjes van ___ cent je heb terug gegeven
+    Opslag2 = nrCoins
     Opslag = coinValue
     Returned.append(Opslag)
+    Amount.append(Opslag2)
     change -= nrCoinsReturned * coinValue # change - ( coins die je heb terug gegeven X Coinvalue  )
     
 
@@ -27,4 +30,6 @@ if change > 0: #als change groter is dan 0
   print('Change not returned: ', str(change) + ' cents') # als change groter is dan 0 dan print dit
 else:
   print('done')
-  print(f"{Returned}")
+  for i in range(len(Returned)):
+      print(f"{Amount[i]} coins van {Returned[i]} cents")
+      
