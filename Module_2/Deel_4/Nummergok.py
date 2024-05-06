@@ -1,26 +1,44 @@
 import random 
-ronde = 1
-getal = 1 #random.randint(1,1)
+ronde = 0
 aantalgok = 0
 punten = 0
 
 while ronde < 3:
+    getal = random.randint(1, 3)
+
+    if aantalgok == 10:
+        print()
+        print("Te vaak fout gegokt, ronde geëindigd")
+        doorgaan = input("Wil je doorgaan?2 ")
+        if doorgaan.lower() == "ja":
+            ()
+        else:
+            print(f"Aantal punten {punten}")
+            exit()
+
+    aantalgok = 0
+    ronde += 1
+
     while aantalgok < 10:
+        print()
         print(f"ronde {ronde}")
         gok = int(input("getal "))
+
         if gok == getal:
-            ronde += 1
-            punten +=1
+            punten += 1
             print("Geraden")
             print(f"punten {punten}")
-            aantalgok = 0
-            if ronde != 3:
-                Doorgaan = input("Wil je doorgaan? ")
-                if Doorgaan == "ja":
-                    break
-            else:
-                exit(aantalgok)
+            break
+
         else:
             print("fout")
-        
-print("test")
+            aantalgok += 1
+
+    if ronde != 3 and aantalgok != 10:
+        doorgaan = input("Wil je doorgaan?1 ")
+        if doorgaan.lower() != "ja":
+            print(f"Aantal punten {punten}")
+            exit()
+
+print()
+print(f"Aantal punten {punten}")
