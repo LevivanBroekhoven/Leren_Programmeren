@@ -3,8 +3,8 @@ ronde = 0
 aantalgok = 0
 punten = 0
 
-while ronde < 3:
-    getal = random.randint(1, 3)
+while ronde < 20:
+    getal = random.randint(1, 1000)
 
     if aantalgok == 10:
         print()
@@ -32,9 +32,15 @@ while ronde < 3:
 
         else:
             print("fout")
+            verschil = getal - gok
+            print(verschil)
+            if verschil < 20:
+                print("heel warm")
+            elif verschil < 50:
+                print("warm")
             aantalgok += 1
 
-    if ronde != 3 and aantalgok != 10:
+    if ronde != 20 and aantalgok != 10:
         doorgaan = input("Wil je doorgaan?1 ")
         if doorgaan.lower() != "ja":
             print(f"Aantal punten {punten}")
