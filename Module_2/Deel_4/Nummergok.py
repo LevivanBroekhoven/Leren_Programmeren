@@ -18,7 +18,7 @@ while ronde < 20:
 
     aantalgok = 0
     ronde += 1
-
+ 
     while aantalgok < 10:
         print()
         print(f"ronde {ronde}")
