@@ -1,11 +1,13 @@
+import random
+
 namen_lijst = []
-lootjes_trekken = False
+lootjes_trekken = False 
 
 while not lootjes_trekken:
     naam = input("Voer een naam in: ")
     while True:
         if naam in namen_lijst:
-            print("Voer een nieuwe naam in")
+            naam =input("Voer een nieuwe naam in ")
         else:
             namen_lijst.append(naam)
             break
