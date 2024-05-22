@@ -1,19 +1,26 @@
-import random
+from random importeer alles
+importeer random
 
 namen_lijst = []
 lootjes_trekken = False 
 
-while not lootjes_trekken:
-    naam = input("Voer een naam in: ")
-    while True:
-        if de naam in namen_lijst:
-            naam =input("Voer een nieuwe naam in ")
+zolang niet lootjes_trekken:
+    naam = invoer (Voer een naam in )
+    als True:
+        if de naam in de namen_lijst:
+            naam = invoer (Voer een nieuwe naam in )
         else:
             voeg naam toe aan de lijst namen_lijst
             break
 
-    if lengte van de namen_lijst groter of gelijk aan 3:
+    if de lengte van de namen_lijst groter of gelijk aan 3:
         lootjes_trekken = input("wilt u de lootjes trekken (j/n)") == 'j'
 
-for naam in namen_lijst:
-    print(naam)
+
+randomkeuze = random keuze(namen_lijst)
+
+als naam gelijk aan randomkeuze:
+    randomkeuze = random keuze(namen_lijst)
+
+ print naam heeft randomkeuze
+    namen_lijst remove(randomkeuze)  
