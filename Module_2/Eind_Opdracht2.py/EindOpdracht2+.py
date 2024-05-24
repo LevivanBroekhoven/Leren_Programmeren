@@ -3,6 +3,7 @@ import random
 namen_lijst = []
 namen_lijst_copy = []
 lootjes_trekken = False 
+zien = True
 
 while not lootjes_trekken:
     naam = input("Voer een naam in: ")
@@ -33,5 +34,18 @@ while True:
     if werkt:
         break
 
-for naam, assigned_naam in lootjes.items():
-    print(f"{naam} heeft {assigned_naam}")
+
+
+while zien == True:
+    welkezien = input("welke wil je zien? ")
+
+    for naam, assigned_naam in lootjes.items():
+        if naam == welkezien:
+            print(f"{naam} heeft {assigned_naam}")
+
+
+            vederzien = input("wil je nog een zien? (j/n) ")
+            if vederzien == ("j"):
+                ()
+            if vederzien == ("n"):
+                zien = False
