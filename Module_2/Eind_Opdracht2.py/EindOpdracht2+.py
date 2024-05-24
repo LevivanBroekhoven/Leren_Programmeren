@@ -45,7 +45,5 @@ while zien == True:
 
 
             vederzien = input("wil je nog een zien? (j/n) ")
-            if vederzien == ("j"):
-                ()
             if vederzien == ("n"):
                 zien = False

@@ -10,8 +10,7 @@ while not lootjes_trekken:
         if naam in namen_lijst:
             naam = input("Voer een nieuwe naam in: ")
         else:
-            namen_lijst.append(naam)
-            namen_lijst_copy.append(naam)   
+            namen_lijst.append(naam)  
             break
 
     if len(namen_lijst) >= 3:
