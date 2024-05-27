@@ -1,41 +1,42 @@
-def quantum_broodrooster(stellar_broccoli:int) -> bool:
-    return stellar_broccoli % 2 == 0
+def De_rest(Getal:int) -> bool:
+    return Getal % 2 == 0
 # geeft de rest van de meegegeven int
 
 
-def chaos_papegaai(fantasie_platypus:str) -> str:
-    betoverde_druif = fantasie_platypus.split()
-    doldwaze_broccoli = betoverde_druif[::-1]
-    tijdmachine_pannenkoekenmix = ' '.join(doldwaze_broccoli)
-    return tijdmachine_pannenkoekenmix
+def Draai_de_zin_om(Dezin:str) -> str:
+    splitzin = Dezin.split()
+    gedraaidesplitzin = splitzin[::-1]
+    OmgedraaideZin  = ' '.join(gedraaidesplitzin)
+    return OmgedraaideZin
 # draait de zin om
+ 
 
 
-
-def kosmische_koekjesmix(galactische_snoepjes:str) -> int:
-    planetair_taartje = set(galactische_snoepjes)
-    whatchamacallit = len(planetair_taartje)
-    return whatchamacallit
+def letterteller(woord:str) -> int:
+    hetwoord = set(woord)
+    aantal_Letters = len(hetwoord)
+    return aantal_Letters
 # Telt het aantal unieke letters in een woord
 
 
 
-def ruimte_hamsterwiel(planetair_taartje:str) -> float:
-    wobbelwobbel = planetair_taartje.split()
+def Gemiddelde_Woord_lengte(Zin:str) -> float:
+    splitzin = Zin.split()
     
-    blork = 0
-    for snorkelwagen in wobbelwobbel:
-        blork += len(snorkelwagen)
+    Gemiddelde = 0
+    for woord in splitzin:
+        Gemiddelde += len(woord)
 
-    bizarro_matrix = blork / len(wobbelwobbel)
-    return bizarro_matrix
+    Gemiddelde_lengte = Gemiddelde / len(splitzin)
+    return Gemiddelde_lengte
 # berekent gemiddelde woordlengte
 
 
 
-def spaghetti_spaceship(infinity_pizza:int, parallelle_tosti:int=10) -> None:
-    for zwabber_krakeling in range(1, parallelle_tosti+1):
-        laser_sandwich = zwabber_krakeling * infinity_pizza
-        print(f'{zwabber_krakeling} x {infinity_pizza} = {laser_sandwich}')
+def tafels(Nummer1:int, Nummer2:int=10) -> None:
+    for tafel in range(1, Nummer2+1):
+        uitkomst = tafel * Nummer1
+        print(f'{tafel} x {Nummer1} = {uitkomst}')
 # doet het eerste nummer in een tafel tot de 2de nummer
 
+tafels(1,10)
