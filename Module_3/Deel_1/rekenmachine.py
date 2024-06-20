@@ -12,122 +12,69 @@ while True:
         choice = input("wat wilt u doen?\n A)getallen optellen,\n B)getallen aftrekken,\n C)getallen vermenigvuldigen,\n D)getallen delen,\n E)getal ophogen,\n F)getal verlagen,\n G)getal verdubbelen\n H)getal halveren?\n")
 
     if choice == "A":
-        if nummer1 == None:
-             while True:
-                try:
-                    nummer1 = float(input("welk getal? "))
-                    break
-                except:
-                    print("geen geldig getal")
-        while True:
-            try:
-                nummer2 = float(input("welk getal? "))
-                break
-            except:
-                print("geen geldig getal")
+        nummer1 = nummerV(nummer1)
+
+        nummer2 = nummerV2(nummer2)
         a,b = optellen(nummer1, nummer2)
         nummer1 = b
         print(a)
 
     if choice == "B":
-        if nummer1 == None:
-            while True:
-                try:
-                    nummer1 = float(input("welk getal? "))
-                    break
-                except:
-                    print("geen geldig getal")
-        while True:
-            try:
-                nummer2 = float(input("welk getal? "))
-                break
-            except:
-                print("geen geldig getal")
+        nummer1 = nummerV(nummer1)
+
+        nummer2 = nummerV2(nummer2)
         a, b = aftrekken(nummer1,nummer2)
         nummer1 = b 
         print(a)
          
     if choice == "C":
-        if nummer1 == None:
-            while True:
-                try:
-                    nummer1 = float(input("welk getal? "))
-                    break
-                except:
-                    print("geen geldig getal")
-                 
-        while True:
-            try:
-                nummer2 = float(input("welk getal? "))
-                break
-            except:
-                print("geen geldig getal")
+        nummer1 = nummerV(nummer1)
+
+        nummer2 = nummerV2(nummer2)
         a, b = keer(nummer1,nummer2)
         nummer1 = b 
         print(a)
         
     if choice == "D":
-        if nummer1 == None:
-            while True:
-                try:
-                    nummer1 = float(input("welk getal? "))
-                    break
-                except:
-                    print("geen geldig getal")
-            
         while True:
-            try:
-                nummer2 = float(input("welk getal? "))
+            nummer1 = nummerV(nummer1)
+            if nummer1 != 0:
                 break
-            except:
-                print("geen geldig getal")
+        while True:
+            nummer2 = nummerV2(nummer2)
+            if nummer1 != 0:
+                break
         a, b = delen(nummer1,nummer2)
         nummer1 = b 
         print(a)
 
     if choice == "E":
-        if nummer1 == None:
-            try:
-                nummer1 = float(input("welk getal? "))
-                break
-            except:
-                print("geen geldig getal")
+        nummer1 = nummerV(nummer1)
+
         nummer2 = 1
         a, b = ophogen(nummer1,nummer2)
         nummer1 = b 
         print(a)
 
     if choice == "F":
-        if nummer1 == None:
-            try:
-                nummer1 = float(input("welk getal? "))
-                break
-            except:
-                print("geen geldig getal")
+        nummer1 = nummerV(nummer1)
+
         nummer2 = 1
         a, b = verlagen(nummer1,nummer2)
         nummer1 = b 
         print(a)
 
-    if choice == "G":   
-        if nummer1 == None:
-            try:
-                nummer1 = float(input("welk getal? "))
-                break
-            except:
-                print("geen geldig getal")
+    if choice == "G":
+        nummer1 = nummerV(nummer1)
+
         nummer2 = 2
         a, b = verdubbelen(nummer1,nummer2)
         nummer1 = b 
         print(a)
 
     if choice == "h":
-        if nummer1 == None:
-            try:
-                nummer1 = float(input("welk getal? "))
-                break
-            except:
-                print("geen geldig getal")
+        nummer1 = nummerV(nummer1)
+
         nummer2 = 2
         a, b = halveren(nummer1,nummer2)
         nummer1 = b 
@@ -136,6 +83,8 @@ while True:
     if nummer1 != None:
         if choice == "I":
          break
+
+    
 
 
 
