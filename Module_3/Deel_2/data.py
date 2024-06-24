@@ -1,5 +1,10 @@
 #constants
 JOURNEY_IN_DAYS = 0
+COPPERTOSILVER = 10
+SILVERTOGOLD = 5
+PLATINUMTOGOLD = 25
+
+
 
 #data
 mainCharacter = {
