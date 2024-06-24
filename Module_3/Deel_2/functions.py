@@ -23,7 +23,12 @@ def getPersonCashInGold(personCash:dict) -> float:
 ##################### O05 #####################
 
 def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
-    pass
+    koste1 = people * COST_FOOD_HUMAN_COPPER_PER_DAY * JOURNEY_IN_DAYS
+    koste2 = horses * COST_FOOD_HORSE_COPPER_PER_DAY * JOURNEY_IN_DAYS
+    koste = koste1 + koste2
+    Goudkoste = copper2gold(koste)
+    totalekoste = round(Goudkoste,2)
+    return totalekoste
 
 ##################### O06 #####################
 
