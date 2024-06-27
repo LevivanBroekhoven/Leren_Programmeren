@@ -24,14 +24,11 @@ def getPersonCashInGold(personCash:dict) -> float:
 ##################### O05 #####################
 
 def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
-    koste1 = people * COST_FOOD_HUMAN_COPPER_PER_DAY * JOURNEY_IN_DAYS
-    koste2 = horses * COST_FOOD_HORSE_COPPER_PER_DAY * JOURNEY_IN_DAYS
-    koste = koste1 + koste2
-    Goudkoste = copper2gold(koste)
-    totalekoste = round(Goudkoste,2)
-    return totalekoste
+    costhuman = people * COST_FOOD_HUMAN_COPPER_PER_DAY * JOURNEY_IN_DAYS
+    costhorse = horses * COST_FOOD_HORSE_COPPER_PER_DAY * JOURNEY_IN_DAYS
+    return round(copper2gold(costhuman + costhorse),2)
 
-##################### O06 #####################
+##################### O06 ##################### 
 
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
     resultaten = []
@@ -42,18 +39,17 @@ def getFromListByKeyIs(list:list, key:str, value:any) -> list:
     return resultaten
 
 def getAdventuringPeople(people:list) -> list:
-    result = getFromListByKeyIs(people, 'adventuring', True)
-    return result
+    return getFromListByKeyIs(people, 'adventuring', True)
+    
 
 def getShareWithFriends(friends:list) -> list:
-    result = getFromListByKeyIs(friends, 'shareWith', True)
-    return result
+    return getFromListByKeyIs(friends, 'shareWith', True)
+    
 
 def getAdventuringFriends(friends:list) -> list:  
     adventuring_friends = getFromListByKeyIs(friends, 'adventuring', True)
-    result = getFromListByKeyIs(adventuring_friends, 'shareWith', True)
+    return getFromListByKeyIs(adventuring_friends, 'shareWith', True)
     
-    return result
 
 ##################### O07 #####################
 
@@ -68,30 +64,37 @@ def getNumberOfTentsNeeded(people:int) -> int:
     return (nummer)
 
 def getTotalRentalCost(horses:int, tents:int) -> float:
-    num1 = horses * COST_HORSE_SILVER_PER_DAY
-    num1 = num1 * JOURNEY_IN_DAYS
-    num2 = tents * COST_TENT_GOLD_PER_WEEK
-    weeks = JOURNEY_IN_DAYS / 7
-    weeks = math.ceil(weeks)
-    print(weeks)
-    num2 = num2 * weeks
-    num1 = silver2gold(num1)
-    total = num1 + num2
-    return total
+    weeks = math.ceil(JOURNEY_IN_DAYS / 7)
+    kostenpaarden = horses * COST_HORSE_SILVER_PER_DAY * JOURNEY_IN_DAYS
+    kostententen = tents * COST_TENT_GOLD_PER_WEEK * weeks
+
+    return silver2gold(kostenpaarden)  + kostententen
 
 
 ##################### O08 #####################
 
-def getItemsAsText(items:list) -> str:
-    result = []
-    for x in items:
-        item_text = f"{x['amount']}{x['unit']} {x['name']}"
-        result.append(item_text)
-    if len(result) > 1:
-        return ', '.join(result[:-1]) + ' & ' + result[-1]
-    else:
-        return ', '.join(result)
-    
+# def getItemsAsText(items:list) -> str:
+#     result = []
+#     for x in items:
+#         item_text = f"{x['amount']}{x['unit']} {x['name']}"
+#         result.append(item_text)
+#     if len(result) > 1:
+#         return ', '.join(result[:-1]) + ' & ' + result[-1]
+#     else:
+#         return ', '.join(result)
+
+def getItemsAsText(items:list) -> str: 
+    string = ''
+    for index,item in enumerate(items):
+        string += f"{item['amount']}{item['unit']} {item['name']}"
+        if index < len(items)-2:
+            string += ', '
+        elif index < len(items)-1:
+            string += ' & '
+    return string
+
+
+
 def getItemsValueInGold(items:list) -> float:
     total = 0
 
@@ -99,20 +102,16 @@ def getItemsValueInGold(items:list) -> float:
     for x in items:
         item_price = x['price']
         if item_price['type'] == 'silver':
-            geld = item_price['amount']
-            erbij = silver2gold(geld)
-            total += erbij * x['amount']
+            total += silver2gold(item_price['amount']) * x['amount']
+
         elif item_price['type'] == 'copper':
-            geld = item_price['amount']
-            erbij = copper2gold(geld)
-            total += erbij * x['amount']
+            total += copper2gold(item_price['amount']) * x['amount']
+
         elif item_price['type'] == 'gold':
-            geld = item_price['amount']
-            total += geld * x['amount']
+            total += item_price['amount'] * x['amount']
+
         elif item_price['type'] == 'platinum':
-            geld = item_price['amount']
-            erbij = platinum2gold(geld)
-            total += erbij * x['amount']
+            total += platinum2gold(item_price['amount']) * x['amount']
 
 
     return float(total)
@@ -121,7 +120,12 @@ def getItemsValueInGold(items:list) -> float:
 ##################### O09 #####################
 
 def getCashInGoldFromPeople(people:list) -> float:
-    pass
+    total = 0.0
+    
+    for x in people:
+        total = total + getPersonCashInGold(x['cash'])
+
+    return round(total ,2)
 
 ##################### O10 #####################
 
