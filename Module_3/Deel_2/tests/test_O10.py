@@ -11,7 +11,7 @@ result = len(investors)
 test('investors imported', expected, result)
 
 testarg_investors_test1_2_4 = [{
-    'profitReturn' : 5,
+    'profitReturn' : 5, 
     'adventuring' : True
 }]
 testarg_gearList_test1_8 = [{

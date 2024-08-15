@@ -145,7 +145,12 @@ def getAdventuringInvestors(investors:list) -> list:
 
 
 def getTotalInvestorsCosts(investors:list, gear:list) -> float:
-    pass
+    investors_adventuring = getAdventuringInvestors(getInterestingInvestors(investors))
+    aantal_investors_adventuring = len(investors_adventuring)
+    if len(investors_adventuring) <= 0:
+        return 0.0
+    else:
+        return getTotalRentalCost(aantal_investors_adventuring, aantal_investors_adventuring) + getJourneyFoodCostsInGold(aantal_investors_adventuring,  aantal_investors_adventuring) + getItemsValueInGold(gear) * aantal_investors_adventuring
 
 
 ##################### O11 #####################
