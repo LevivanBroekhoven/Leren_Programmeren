@@ -156,10 +156,13 @@ def getTotalInvestorsCosts(investors:list, gear:list) -> float:
 ##################### O11 #####################
 
 def getMaxAmountOfNightsInInn(leftoverGold:float, people:int, horses:int) -> int:
-    pass
+    costgroup =  silver2gold(people * COST_INN_HUMAN_SILVER_PER_NIGHT)
+    costhorses = copper2gold(horses * COST_INN_HORSE_COPPER_PER_NIGHT)
+    totalcostINN = costgroup + costhorses
+    return math.floor(leftoverGold / totalcostINN ) 
 
 def getJourneyInnCostsInGold(nightsInInn:int, people:int, horses:int) -> float:
-    pass
+    return round((silver2gold(people * COST_INN_HUMAN_SILVER_PER_NIGHT) + copper2gold(horses * COST_INN_HORSE_COPPER_PER_NIGHT)) * nightsInInn,2)
 
 ##################### O13 #####################
 
