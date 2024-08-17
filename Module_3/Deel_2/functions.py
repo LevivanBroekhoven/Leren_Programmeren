@@ -132,13 +132,14 @@ def getCashInGoldFromPeople(people:list) -> float:
 def getInterestingInvestors(investors:list) -> list:
     list = []
     for x in investors:
-        if x['profitReturn'] < 10:
+        if x['profitReturn'] <= 10:
             list.append(x)
     return(list)
 
 def getAdventuringInvestors(investors:list) -> list:
+    intresting_investors = getInterestingInvestors(investors) 
     list = []
-    for x in investors:
+    for x in intresting_investors:
         if x['adventuring']:
             list.append(x)
     return(list)
@@ -184,7 +185,47 @@ def getAdventurerCut(profitGold:float, investorsCuts:list, fellowship:int) -> fl
 ##################### O14 #####################
 
 def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:list) -> list:
-    pass
+    people = [mainCharacter] + friends + investors
+    earnings = []
+    
+    # haal de juiste inhoud op
+    adventuringFriends = getAdventuringFriends(friends)
+    interestingInvestors = getInterestingInvestors(investors)
+    adventuringInvestors = getAdventuringInvestors(investors)
+    investorsCuts = getInvestorsCuts(profitGold, investors)
+    shareFriends = getShareWithFriends(adventuringFriends)
+    fellowship = shareFriends + adventuringInvestors + [mainCharacter]
+    amountOfPeople = len(fellowship)
+    
+    
+
+    # verdeel de uitkomsten
+    
+    for person in people:
+        cashstart = getPersonCashInGold(person['cash'])
+        if person == mainCharacter:
+            casheind = cashstart + getAdventurerCut(profitGold , investorsCuts , amountOfPeople) + (10 * len(shareFriends))
+        
+        elif person in adventuringInvestors:
+            casheind = cashstart + getAdventurerCut(profitGold , investorsCuts , amountOfPeople) + (profitGold/100 * person['profitReturn'])
+     
+        elif person in interestingInvestors:
+            casheind = cashstart + profitGold/100 * person['profitReturn']
+            
+        elif person in shareFriends:
+            casheind = cashstart + getAdventurerCut(profitGold , investorsCuts , amountOfPeople)-10
+        
+        else:
+            casheind = cashstart
+
+    
+        earnings.append({
+            'name'   : person['name'],
+            'start'  : cashstart,
+            'end'    : casheind
+        })
+
+    return earnings
 
 ##################### view functions #####################
 
