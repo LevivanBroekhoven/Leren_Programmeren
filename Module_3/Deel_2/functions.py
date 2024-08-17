@@ -114,7 +114,7 @@ def getItemsValueInGold(items:list) -> float:
             total += platinum2gold(item_price['amount']) * x['amount']
 
 
-    return float(total)
+    return round (total, 2)
     
 
 ##################### O09 #####################
@@ -221,8 +221,8 @@ def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:lis
     
         earnings.append({
             'name'   : person['name'],
-            'start'  : cashstart,
-            'end'    : casheind
+            'start'  : round(cashstart, 2),
+            'end'    : round (casheind, 2)
         })
 
     return earnings
