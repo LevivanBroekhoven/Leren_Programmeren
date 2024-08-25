@@ -1,0 +1,72 @@
+{
+    "roomorder": "1,7,4,5,8,3,9,6,2,10",
+    "start": "18-08-2024 16:07:36",
+    "end": "18-08-2024 16:08:07",
+    "data": {
+        "player": {
+            "noice": 1,
+            "pickups": [
+                "shield"
+            ]
+        },
+        "route": {
+            "routetaken": [
+                "step A : 1",
+                "step B : 7",
+                "step C : 4",
+                "step D : 2"
+            ],
+            "doorcode": "",
+            "errors": [],
+            "roomanswers": [
+                "room1 : b",
+                "room7 : b",
+                "room4 : a",
+                "room2 : x"
+            ]
+        },
+        "story": {
+            "fullstory": [
+                "Je herinnert je alleen nog de val door een diep gat, na een zware aardbeving.",
+                "Versuft sta je op.",
+                "Je ziet links van je een deur en rechts van je een gang met aan het einde een standbeeld.",
+                "Je stapt de gang binnen en opnieuw begint de grond te schudden.",
+                "Je rent zo hard als je kunt door de lange gang richting het standbeeld terwijl de gang achter je instort.",
+                "Zodra je bij het einde van de gang komt en bij het standbeeld staat, stopt de grond met schudden.",
+                "Je kijkt achterom en ziet de gang volledig ingestort.",
+                "Voor je staat een standbeeld, met in zijn handen een schild.",
+                "Je pakt het schild van het standbeeld, het voelt licht en handzaam.",
+                "Nu je nog eens goed om je heen kijkt, zie je dat de gang links steeds breder wordt en de gang rechts smaller.",
+                "Je baant je een weg door een smalle, slingerende gang.",
+                "Je komt bij een muur met een afdruk van een hand erop.",
+                "Je legt je hand erop...",
+                "De muur voor je schuift als een deur open en je stapt erdoorheen.",
+                "Je ziet dat je uit een geheime deur in de vorm van een boekenkast bent gestapt.",
+                "De boekenkast gaat langzaam dicht.",
+                "Schuin voor je zie je een echte deur.",
+                "Je probeert hem te openen, maar hij zit op slot.",
+                "Je kijkt om je heen.",
+                "Je staat in een kamer met allemaal boekenkasten en een grote tafel in het midden.",
+                "Je ziet 2 trappen aan het einde van de kamer.",
+                "Een trap naar beneden en een trap naar boven.",
+                "Je loopt de trap en ziet een grote kamer voor je afgesloten met een hek.",
+                "Je rammelt wat aan het hek en het schiet open.",
+                "Je loopt door het hek en het valt achter dicht.",
+                "Voor een kolosale ijzeren deur zie je een wezen van onmetelijke kracht en grandeur: Een Draak...",
+                "De draak ligt rustig te slapen, zijn machtige flanken rijzen gelijkmatig op en neer met zijn ademhaling.",
+                "Je ziet een sleutel om zijn nek zitten, die zal wel voor die grote ijzeren deur zijn.",
+                "Voorzichtig sluip je richting het beest en rijkt naar de sleutel.",
+                "Het schild, dat op je rug vast zat, valt op de grond en de draak die zo vredig lag te slapen opend zijn ogen.",
+                "Met een vloeiende beweging slokt de draak je in 1 keer op.",
+                "Je bent omgekomen in kamer 2."
+            ],
+            "choices": [
+                "Neem je A) de deur links of B) de gang rechts? : b",
+                "Wil je het schild meenemen? (Y/N) : y",
+                "Neem je de gang A) links of B) rechts? : b",
+                "Welke trap neem je? A) links die naar boven gaat of B) rechtdoor die naar beneden gaat? : a"
+            ],
+            "errors": []
+        }
+    }
+}

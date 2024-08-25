@@ -1,0 +1,69 @@
+{
+    "roomorder": "1,7,4,T,U,V,W,X,2,10",
+    "start": "18-08-2024 13:02:29",
+    "end": "18-08-2024 13:03:16",
+    "data": {
+        "player": {
+            "noice": 0,
+            "pickups": []
+        },
+        "route": {
+            "routetaken": [
+                "step A : 1",
+                "step B : 4",
+                "step C : 2",
+                "step D : 10"
+            ],
+            "doorcode": "142",
+            "errors": [],
+            "roomanswers": [
+                "room1 : a",
+                "room4 : a",
+                "room2 : -",
+                "room10 : 142"
+            ]
+        },
+        "story": {
+            "fullstory": [
+                "Je herinnert je alleen nog de val door een diep gat, na een zware aardbeving.",
+                "Versuft sta je op.",
+                "Je ziet links van je een deur en rechts van je een gang met aan het einde een standbeeld.",
+                "Je opent de deur en stapt er doorheen.",
+                "Tot je verbazing laat je de deur los.",
+                "De deur valt achter je in het slot en lijkt niet meer open te kunnen.",
+                "Je staat in een kamer met allemaal boekenkasten en een grote tafel in het midden.",
+                "Je ziet 2 trappen aan het einde van de kamer.",
+                "Een trap naar beneden en een trap naar boven.",
+                "Je loopt de trap en ziet een grote kamer voor je afgesloten met een hek.",
+                "Je rammelt wat aan het hek en het schiet open.",
+                "Je loopt door het hek en het valt achter dicht.",
+                "Voor een kolosale ijzeren deur zie je een wezen van onmetelijke kracht en grandeur: Een Draak...",
+                "De draak ligt rustig te slapen, zijn machtige flanken rijzen gelijkmatig op en neer met zijn ademhaling.",
+                "Je ziet een sleutel om zijn nek zitten, die zal wel voor die grote ijzeren deur zijn.",
+                "Voorzichtig sluip je richting het beest en rijkt naar de sleutel.",
+                "Met veel beleid pak je de sleutel van de nek van de draak.",
+                "Met de sleutel in je hand snel je je naar de grote ijzeren deur.",
+                "Hij past perfect en je opent de deur soepel.",
+                "Je stapt de deur door.",
+                "Achter je slaat de deur dicht.",
+                "Recht voor je zie je een trap naar boven.",
+                "Dat moet de uitgang zijn, denk je bij jezelf.",
+                "Je loopt de ronde, ijzeren trap op.",
+                "Boven aan de trap kom je bij een dichte deur.",
+                "Naast de deur zit een plaat met de cijfers 1 t/m 9 en een beschrijving er onder.",
+                "De beschrijving luidt:",
+                "\"Toets de route in die u heeft bewandeld om hier te geraken\".",
+                "\"U heeft 3 pogingen om de 3-cijferige code correct in te voeren\".",
+                "Nog 3 pogingen over...",
+                "Met een harde toon zwaait de deur open en je rent naar buiten.",
+                "Je bent succesvol ontsnapt uit de dungeon."
+            ],
+            "choices": [
+                "Neem je A) de deur links of B) de gang rechts? : a",
+                "Welke trap neem je? A) links die naar boven gaat of B) rechtdoor die naar beneden gaat? : a",
+                "Welke 3 cijfers voer je in? : 142"
+            ],
+            "errors": []
+        }
+    }
+}

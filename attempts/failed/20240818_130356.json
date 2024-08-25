@@ -1,0 +1,48 @@
+{
+    "roomorder": "1,7,4,T,U,V,W,X,2,10",
+    "start": "18-08-2024 13:03:47",
+    "end": "18-08-2024 13:03:55",
+    "data": {
+        "player": {
+            "noice": 0,
+            "pickups": []
+        },
+        "route": {
+            "routetaken": [
+                "step A : 1",
+                "step B : 4",
+                "step C : W"
+            ],
+            "doorcode": "",
+            "errors": [
+                "stap C : function roomW not found"
+            ],
+            "roomanswers": [
+                "room1 : a",
+                "room4 : b",
+                "roomW : None"
+            ]
+        },
+        "story": {
+            "fullstory": [
+                "Je herinnert je alleen nog de val door een diep gat, na een zware aardbeving.",
+                "Versuft sta je op.",
+                "Je ziet links van je een deur en rechts van je een gang met aan het einde een standbeeld.",
+                "Je opent de deur en stapt er doorheen.",
+                "Tot je verbazing laat je de deur los.",
+                "De deur valt achter je in het slot en lijkt niet meer open te kunnen.",
+                "Je staat in een kamer met allemaal boekenkasten en een grote tafel in het midden.",
+                "Je ziet 2 trappen aan het einde van de kamer.",
+                "Een trap naar beneden en een trap naar boven.",
+                "...",
+                "Je bent ergens waar je niet verwacht te zijn.",
+                "Je bent verdwaald geraakt in de dungeon."
+            ],
+            "choices": [
+                "Neem je A) de deur links of B) de gang rechts? : a",
+                "Welke trap neem je? A) links die naar boven gaat of B) rechtdoor die naar beneden gaat? : b"
+            ],
+            "errors": []
+        }
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "roomorder": "1,7,4,T,U,V,9,X,2,10",
+    "start": "18-08-2024 13:25:29",
+    "end": "18-08-2024 13:26:08",
+    "data": {
+        "player": {
+            "noice": 1,
+            "pickups": [
+                "shield"
+            ]
+        },
+        "route": {
+            "routetaken": [
+                "step A : 1",
+                "step B : 7",
+                "step C : T"
+            ],
+            "doorcode": "",
+            "errors": [
+                "stap C : function roomT not found"
+            ],
+            "roomanswers": [
+                "room1 : b",
+                "room7 : a",
+                "roomT : None"
+            ]
+        },
+        "story": {
+            "fullstory": [
+                "Je herinnert je alleen nog de val door een diep gat, na een zware aardbeving.",
+                "Versuft sta je op.",
+                "Je ziet links van je een deur en rechts van je een gang met aan het einde een standbeeld.",
+                "Je stapt de gang binnen en opnieuw begint de grond te schudden.",
+                "Je rent zo hard als je kunt door de lange gang richting het standbeeld terwijl de gang achter je instort.",
+                "Zodra je bij het einde van de gang komt en bij het standbeeld staat, stopt de grond met schudden.",
+                "Je kijkt achterom en ziet de gang volledig ingestort.",
+                "Voor je staat een standbeeld, met in zijn handen een schild.",
+                "Je pakt het schild van het standbeeld, het voelt licht en handzaam.",
+                "Nu je nog eens goed om je heen kijkt, zie je dat de gang links steeds breder wordt en de gang rechts smaller.",
+                "...",
+                "Je bent ergens waar je niet verwacht te zijn.",
+                "Je bent verdwaald geraakt in de dungeon."
+            ],
+            "choices": [
+                "Neem je A) de deur links of B) de gang rechts? : b",
+                "Wil je het schild meenemen? (Y/N) : y",
+                "Neem je de gang A) links of B) rechts? : a"
+            ],
+            "errors": [
+                "Neem je A) de deur links of B) de gang rechts? : rechts",
+                "Neem je de gang A) links of B) rechts? : links"
+            ]
+        }
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "roomorder": "1,7,4,5,U,V,9,6,2,10",
+    "start": "18-08-2024 15:26:32",
+    "end": "18-08-2024 15:27:08",
+    "data": {
+        "player": {
+            "noice": 1,
+            "pickups": [
+                "shield"
+            ]
+        },
+        "route": {
+            "routetaken": [
+                "step A : 1",
+                "step B : 7",
+                "step C : 5",
+                "step D : U"
+            ],
+            "doorcode": "",
+            "errors": [
+                "stap D : function roomU not found"
+            ],
+            "roomanswers": [
+                "room1 : b",
+                "room7 : a",
+                "room5 : b",
+                "roomU : None"
+            ]
+        },
+        "story": {
+            "fullstory": [
+                "Je herinnert je alleen nog de val door een diep gat, na een zware aardbeving.",
+                "Versuft sta je op.",
+                "Je ziet links van je een deur en rechts van je een gang met aan het einde een standbeeld.",
+                "Je stapt de gang binnen en opnieuw begint de grond te schudden.",
+                "Je rent zo hard als je kunt door de lange gang richting het standbeeld terwijl de gang achter je instort.",
+                "Zodra je bij het einde van de gang komt en bij het standbeeld staat, stopt de grond met schudden.",
+                "Je kijkt achterom en ziet de gang volledig ingestort.",
+                "Voor je staat een standbeeld, met in zijn handen een schild.",
+                "Je pakt het schild van het standbeeld, het voelt licht en handzaam.",
+                "Nu je nog eens goed om je heen kijkt, zie je dat de gang links steeds breder wordt en de gang rechts smaller.",
+                "Je stapt een grote hal gevuld met rijen kolossale pilaren.",
+                "Het schamele licht van flikkerende fakkels voorspelt niets goeds.",
+                "Een muffe vochtige geur hangt in de lucht, vermengd met een vage geur van bedorven voedsel.",
+                "Tussen de pilaren zie je een grote schim bewegen.",
+                "Je stapt voorzichtig verder de ruimte in.",
+                "Plots schrik je op van een hard gegrom achter je.",
+                "Je kijkt om en achter je staat een enorme trol die zijn knuppel naar achterwaarts beweegt om je te slaan.",
+                "Je bukt net op tijd en een van de pilaren krijgt het voor zijn kiezen.",
+                "Een groot brokstuk vliegt de hal door en maakt een gat in de muur.",
+                "De pilaar stort in op het hoofd van de trol, die alleen maar bozer wordt.",
+                "Even neem je de tijd om om je heen te kijken en zie je 2 opties.",
+                "Een gang verderop of door het zojuist ontstane gat.",
+                "Je staat op en trekt een sprintje naar het gat.",
+                "...",
+                "Je bent ergens waar je niet verwacht te zijn.",
+                "Je bent verdwaald geraakt in de dungeon."
+            ],
+            "choices": [
+                "Neem je A) de deur links of B) de gang rechts? : b",
+                "Wil je het schild meenemen? (Y/N) : y",
+                "Neem je de gang A) links of B) rechts? : a",
+                "Wat doe je? A) Rennen of B) Bukken? : b",
+                "Wat doe je? A) Naar de gang of B) Door het gat? : b"
+            ],
+            "errors": []
+        }
+    }
+}

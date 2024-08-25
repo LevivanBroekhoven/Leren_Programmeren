@@ -1,0 +1,61 @@
+{
+    "roomorder": "1,7,4,T,U,V,W,X,2,Z",
+    "start": "18-08-2024 13:01:18",
+    "end": "18-08-2024 13:01:34",
+    "data": {
+        "player": {
+            "noice": 0,
+            "pickups": []
+        },
+        "route": {
+            "routetaken": [
+                "step A : 1",
+                "step B : 4",
+                "step C : 2",
+                "step D : Z"
+            ],
+            "doorcode": "",
+            "errors": [
+                "stap D : function roomZ not found"
+            ],
+            "roomanswers": [
+                "room1 : a",
+                "room4 : a",
+                "room2 : -",
+                "roomZ : None"
+            ]
+        },
+        "story": {
+            "fullstory": [
+                "Je herinnert je alleen nog de val door een diep gat, na een zware aardbeving.",
+                "Versuft sta je op.",
+                "Je ziet links van je een deur en rechts van je een gang met aan het einde een standbeeld.",
+                "Je opent de deur en stapt er doorheen.",
+                "Tot je verbazing laat je de deur los.",
+                "De deur valt achter je in het slot en lijkt niet meer open te kunnen.",
+                "Je staat in een kamer met allemaal boekenkasten en een grote tafel in het midden.",
+                "Je ziet 2 trappen aan het einde van de kamer.",
+                "Een trap naar beneden en een trap naar boven.",
+                "Je loopt de trap en ziet een grote kamer voor je afgesloten met een hek.",
+                "Je rammelt wat aan het hek en het schiet open.",
+                "Je loopt door het hek en het valt achter dicht.",
+                "Voor een kolosale ijzeren deur zie je een wezen van onmetelijke kracht en grandeur: Een Draak...",
+                "De draak ligt rustig te slapen, zijn machtige flanken rijzen gelijkmatig op en neer met zijn ademhaling.",
+                "Je ziet een sleutel om zijn nek zitten, die zal wel voor die grote ijzeren deur zijn.",
+                "Voorzichtig sluip je richting het beest en rijkt naar de sleutel.",
+                "Met veel beleid pak je de sleutel van de nek van de draak.",
+                "Met de sleutel in je hand snel je je naar de grote ijzeren deur.",
+                "Hij past perfect en je opent de deur soepel.",
+                "Je stapt de deur door.",
+                "...",
+                "Je bent ergens waar je niet verwacht te zijn.",
+                "Je bent verdwaald geraakt in de dungeon."
+            ],
+            "choices": [
+                "Neem je A) de deur links of B) de gang rechts? : a",
+                "Welke trap neem je? A) links die naar boven gaat of B) rechtdoor die naar beneden gaat? : a"
+            ],
+            "errors": []
+        }
+    }
+}

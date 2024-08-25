@@ -1,0 +1,113 @@
+{
+    "roomorder": "1,7,4,5,U,V,9,6,2,10",
+    "start": "18-08-2024 15:24:07",
+    "end": "18-08-2024 15:26:03",
+    "data": {
+        "player": {
+            "noice": 2,
+            "pickups": [
+                "lever",
+                "crystal"
+            ]
+        },
+        "route": {
+            "routetaken": [
+                "step A : 1",
+                "step B : 7",
+                "step C : 5",
+                "step D : 9",
+                "step E : 6",
+                "step F : 2"
+            ],
+            "doorcode": "",
+            "errors": [],
+            "roomanswers": [
+                "room1 : b",
+                "room7 : a",
+                "room5 : a",
+                "room9 : b",
+                "room6 : b",
+                "room2 : x"
+            ]
+        },
+        "story": {
+            "fullstory": [
+                "Je herinnert je alleen nog de val door een diep gat, na een zware aardbeving.",
+                "Versuft sta je op.",
+                "Je ziet links van je een deur en rechts van je een gang met aan het einde een standbeeld.",
+                "Je stapt de gang binnen en opnieuw begint de grond te schudden.",
+                "Je rent zo hard als je kunt door de lange gang richting het standbeeld terwijl de gang achter je instort.",
+                "Zodra je bij het einde van de gang komt en bij het standbeeld staat, stopt de grond met schudden.",
+                "Je kijkt achterom en ziet de gang volledig ingestort.",
+                "Voor je staat een standbeeld, met in zijn handen een schild.",
+                "Je pakt het schild van het standbeeld, het voelt licht en handzaam.",
+                "Nu je nog eens goed om je heen kijkt, zie je dat de gang links steeds breder wordt en de gang rechts smaller.",
+                "Je stapt een grote hal gevuld met rijen kolossale pilaren.",
+                "Het schamele licht van flikkerende fakkels voorspelt niets goeds.",
+                "Een muffe vochtige geur hangt in de lucht, vermengd met een vage geur van bedorven voedsel.",
+                "Tussen de pilaren zie je een grote schim bewegen.",
+                "Je stapt voorzichtig verder de ruimte in.",
+                "Plots schrik je op van een hard gegrom achter je.",
+                "Je kijkt om en achter je staat een enorme trol die zijn knuppel naar achterwaarts beweegt om je te slaan.",
+                "Je rent de eerste de beste afslag in die je ziet.",
+                "Plots sta je voor een houte loopbrug met de trol op je hielen.",
+                "Je probeert voorzichtig te doen maar je enige optie is nu om door te lopen.",
+                "Dan herinner je het schild dat je zojuist hebt opgepakt.",
+                "Je houd je schild voor je terwijl de trol op je af komt rennen.",
+                "Hij heeft telaat door dat jij en de verdediging zit en struikelt over je.",
+                "De impact van de trol brengt je uit balans en samen vallen jullie naar beneden.",
+                "Hij aan de rechterkant van de brug en jij aan de linkerkant.",
+                "Het wordt donker voor je ogen.",
+                "Versuft word je wakker op de grond.",
+                "Je kijkt om je heen en ziet dat de trol bewusteloos vast zit in een deuropening.",
+                "Je kijkt omhoog.",
+                "Helaas is er geen weg terug.",
+                "Dus je begint de kamer te onderzoeken.",
+                "Aan 1 van de muren vindt je een kleine opening in de muur met een hendel er naast.",
+                "De hendel staat in de middelste positie en vraagt er om bewogen te worden.",
+                "Je trek de hendel naar benenden en hij breekt af.",
+                "Een scherpe kant laat zich zien aan de andere kant van de hendel.",
+                "Dit zou wel eens een goede pickhouweel kunnen zijn om dat gat groter te maken...",
+                "Ijverig begin je te hakken op het gat net zolang totdat het groot genoeg is om doorheen te kruipen",
+                "Je baant je een weg met je pickhouweel door de smalle gang die schuin naar boven gaat.",
+                "Klimmend, klauterend en met gebruik van je nieuwe tool vind je je weg naar boven.",
+                "Boven aangekomen stuit je op een muur van klimop en licht gloeiende objecten.",
+                "Met een grote zwaai sla je er een weg doorheen en hoort iets vallen op de grond.",
+                "Je stapt een kamer binnen.",
+                "De kamer is verlicht door een zacht gloeiend schijnsel dat wordt uitgezonden door tientallen paarse en roze glinsterende kristallen.",
+                "De muren zijn ruw en bedekt met klimop, maar tussen de weelderige begroeiing fonkelen de kristallen helder, als kleine juwelen in de duisternis.",
+                "Ondanks de vredige uitstraling van de kamer, voelt het als een plaats van rust en bezinning te midden van de grimmige sfeer van de dungeon.",
+                "Op de grond ligt een paarse kristal.",
+                "Je pakt het kristal op en stopt het in je zak.",
+                "Vanuit je ooghoek zie je een standbeeld in de hoek van de kamer, met daarnaast een doorgang met een hek.",
+                "Het standbeeld lijkt als twee druppels water op het standbeeld dat je eerder bent tegengekomen.",
+                "Alleen heeft deze geen schild vast.",
+                "Je plaatst je schild bij het standbeeld.",
+                "Een donkere stem spreekt in je hoofd.",
+                "\"Bedankt voor het terugbrengen van mijn schild.\"",
+                "\"Ik beloon je met een verkorte route.\"",
+                "Het standbeeld begint opzij te schuiven en laat een donkere gang zien.",
+                "\"Let op, deze gang kan gevaarlijk zijn.\"",
+                "Je loopt richting het hek, opent het.",
+                "Je loopt door het hek en het valt achter dicht.",
+                "Voor een kolosale ijzeren deur zie je een wezen van onmetelijke kracht en grandeur: Een Draak...",
+                "Zijn gigantische ogen zijn op jouw gericht, hij is klaarwakker.",
+                "\"Wie ben jij om mijn kristallen te stelen\", zegt de draak met een luide stem.",
+                "De draak haalt zijn kop naar achteren en spuwt een vuurzee op je af.",
+                "Je bent omgekomen in kamer 2."
+            ],
+            "choices": [
+                "Neem je A) de deur links of B) de gang rechts? : b",
+                "Wil je het schild meenemen? (Y/N) : y",
+                "Neem je de gang A) links of B) rechts? : a",
+                "Wat doe je? A) Rennen of B) Bukken? : a",
+                "Wat doe je? A) toch de brug over of B) Verdedigen? : b",
+                "Welke kant duw je de hendel op? A) Omhoog | B) Naar beneden? : b",
+                "Wil je het kristal oppakken (Y/N)? : y",
+                "Wil je je schild bij het standbeeld plaatsen? (Y/N) : y",
+                "Wat doe je? A) Neem de verkorte route of B) doorlopen : b"
+            ],
+            "errors": []
+        }
+    }
+}

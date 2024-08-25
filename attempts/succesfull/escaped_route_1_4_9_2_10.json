@@ -1,0 +1,85 @@
+{
+    "roomorder": "1,7,4,T,U,V,9,X,2,10",
+    "start": "18-08-2024 13:04:36",
+    "end": "18-08-2024 13:05:40",
+    "data": {
+        "player": {
+            "noice": 0,
+            "pickups": []
+        },
+        "route": {
+            "routetaken": [
+                "step A : 1",
+                "step B : 4",
+                "step C : 9",
+                "step D : 2",
+                "step E : 10"
+            ],
+            "doorcode": "1492",
+            "errors": [],
+            "roomanswers": [
+                "room1 : a",
+                "room4 : b",
+                "room9 : a",
+                "room2 : -",
+                "room10 : 1492"
+            ]
+        },
+        "story": {
+            "fullstory": [
+                "Je herinnert je alleen nog de val door een diep gat, na een zware aardbeving.",
+                "Versuft sta je op.",
+                "Je ziet links van je een deur en rechts van je een gang met aan het einde een standbeeld.",
+                "Je opent de deur en stapt er doorheen.",
+                "Tot je verbazing laat je de deur los.",
+                "De deur valt achter je in het slot en lijkt niet meer open te kunnen.",
+                "Je staat in een kamer met allemaal boekenkasten en een grote tafel in het midden.",
+                "Je ziet 2 trappen aan het einde van de kamer.",
+                "Een trap naar beneden en een trap naar boven.",
+                "Je stapt de trap op naar beneden.",
+                "Tot dusver loopt alles gesmeerd, denk je bij jezelf.",
+                "Bij de derde trede hoor je een onheilspellende klik.",
+                "Achter je valt er een rotsblok uit het plafond op de trap en rolt jouw kant op.",
+                "Je rent zo hard je kunt naar beneden en net voor dat het rotsblok je zou raken spring je door een deur opening.",
+                "Je kijkt achter je en ziet dat het rotsblok is blijven steken.",
+                "Voor nu is de kust weer even veilig.",
+                "Helaas is er geen weg terug.",
+                "Dus je begint de kamer te onderzoeken.",
+                "Aan 1 van de muren vindt je een kleine opening in de muur met een hendel er naast.",
+                "De hendel staat in de middelste positie en vraagt er om bewogen te worden.",
+                "Je duwt de hendel naar boven en je hoort wat gepiep en gekraak.",
+                "Je kijkt omhoog en vanuit het donker komt langzaam een trap naar beneden.",
+                "De trap land met 1 kant op de grond en gaat naar boven aan de andere kant.",
+                "Aan de constructie kun je zien dat dit een brug geweest moet zijn.",
+                "Je loopt door het hek en het valt achter dicht.",
+                "Voor een kolosale ijzeren deur zie je een wezen van onmetelijke kracht en grandeur: Een Draak...",
+                "De draak ligt rustig te slapen, zijn machtige flanken rijzen gelijkmatig op en neer met zijn ademhaling.",
+                "Je ziet een sleutel om zijn nek zitten, die zal wel voor die grote ijzeren deur zijn.",
+                "Voorzichtig sluip je richting het beest en rijkt naar de sleutel.",
+                "Met veel beleid pak je de sleutel van de nek van de draak.",
+                "Met de sleutel in je hand snel je je naar de grote ijzeren deur.",
+                "Hij past perfect en je opent de deur soepel.",
+                "Je stapt de deur door.",
+                "Achter je slaat de deur dicht.",
+                "Recht voor je zie je een trap naar boven.",
+                "Dat moet de uitgang zijn, denk je bij jezelf.",
+                "Je loopt de ronde, ijzeren trap op.",
+                "Boven aan de trap kom je bij een dichte deur.",
+                "Naast de deur zit een plaat met de cijfers 1 t/m 9 en een beschrijving er onder.",
+                "De beschrijving luidt:",
+                "\"Toets de route in die u heeft bewandeld om hier te geraken\".",
+                "\"U heeft 3 pogingen om de 4-cijferige code correct in te voeren\".",
+                "Nog 3 pogingen over...",
+                "Met een harde toon zwaait de deur open en je rent naar buiten.",
+                "Je bent succesvol ontsnapt uit de dungeon."
+            ],
+            "choices": [
+                "Neem je A) de deur links of B) de gang rechts? : a",
+                "Welke trap neem je? A) links die naar boven gaat of B) rechtdoor die naar beneden gaat? : b",
+                "Welke kant duw je de hendel op? A) Omhoog | B) Naar beneden? : a",
+                "Welke 4 cijfers voer je in? : 1492"
+            ],
+            "errors": []
+        }
+    }
+}
