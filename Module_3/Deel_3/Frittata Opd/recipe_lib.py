@@ -1,4 +1,7 @@
 import math
+from math import ceil
+
+nr_persons = int(input("Voor hoeveel mensen? "))
 
 UNIT_PIECES = 'piece'
 UNIT_SPOONS = 'spoon'
@@ -23,12 +26,17 @@ def input_nr_persons(prompt: str) -> int:
 
 
 def round_piece(amount: float) -> int:
-  round(amount, 2)
+    return math.ceil(amount)  # Rond altijd naar boven af
 
-# returns amount rounded to the closest decimals: .00 or .25 or .50 or 0.75 unless amount >= 10
+
 def round_quarter(amount: float) -> float:
-  pass
-  
+    if amount >= 10:
+        return round(amount) 
+    elif nr_persons == 1:
+        return round(amount * 4 + 0.125) / 4
+    else:
+        return round(amount * 4) / 4 
+
 
 # returns single or plural description of a string 'single desciption|plural description' 
 # depending on amount
