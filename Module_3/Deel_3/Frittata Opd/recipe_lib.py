@@ -41,7 +41,11 @@ def round_quarter(amount: float) -> float:
 # returns single or plural description of a string 'single desciption|plural description' 
 # depending on amount
 def str_single_plural(amount: float, txt: str) -> str:
-  pass
+    Txtsplit = txt.split(TXT_PIECES)
+    if amount == 1:
+      return Txtsplit[0]
+    else:
+      return Txtsplit[1]
 
 
 # returns description of single or plural units
@@ -65,7 +69,11 @@ ML_TEASPOON = 5 # one teaspoon contains 5 ml
 ML_CUP = 240 # one cup contains 240 ml
 
 def unit2ml(amount: float, unit: str) -> float:
-  pass
+    ml = amount * unit
+    if ml >= 100:
+      return round(ml)
+    else:
+      return round(ml, 1)
 
 # average densities in gram per ml for common ingredients, to calculate weight(gram) from milliliters(ml)
 # 1ml of salt weighs 1.2 gram 
@@ -76,5 +84,9 @@ GRAM_PER_ML_SPINACH = 0.15
 
 # returns amount in gram for amount in milliliter based on density (weight per volume)
 def ml2gram(amount_ml: float, gram_per_ml: float) -> float:
-  pass
+  gram = amount_ml * gram_per_ml
+  if gram >= 50:
+    return round(gram)
+  else:
+    return round(gram, 1)
 
