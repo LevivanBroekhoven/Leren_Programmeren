@@ -14,6 +14,7 @@ while not lootjes_trekken:
         else:
             namen_lijst.append(naam)
             items = []
+            items.append(naam)
             for x in range(3):
                 item = input("welke 3 items wil je? ")
                 items.append(item)
@@ -49,7 +50,13 @@ while zien:
 
     for naam, assigned_naam in lootjes.items():
         if naam == welkezien:
-            print(f"{naam} heeft {assigned_naam} en die wilt graag {itemslijst}")
-            
+            print(f"{naam} heeft {assigned_naam} en die wilt graag")
+
+            for items in itemslijst:
+                if items[0] == assigned_naam:
+                    for item in items[1:]:
+                        print(item)
+                    break
+
             zien = input("wil je nog een zien? (j/n) ") == "j"
                  
