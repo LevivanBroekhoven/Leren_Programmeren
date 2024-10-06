@@ -8,7 +8,7 @@ while doorgaan != "nee":
     kies_horen_of_bakje(bolletje)
     doorgaan = meerbestellen()
 
-
+bonnetje(bolletje)
 
 
 
