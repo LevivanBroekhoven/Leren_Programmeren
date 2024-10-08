@@ -14,6 +14,40 @@ def Vraag_bolletjes():
         except ValueError:
             print("Sorry, dat snap ik niet.")
 
+def Smaken():
+    global aantalbolletjes, Aardbeicount, Chocoladecount, Muntcount, Vanillecount
+    Aardbeicount = 0
+    Chocoladecount =0
+    Muntcount=0
+    Vanillecount=0
+    
+    for x in range(aantalbolletjes):
+        while True:
+
+            smaak = input(f"Welke smaak wilt u voor bolletje {x+1}? A) Aardbei, C) Chocolade, M) Munt of V) Vanille? ")
+            if smaak == "A":
+                Aardbeicount += 1
+                break
+            if smaak == "C":
+                Chocoladecount +=1
+                break
+            if smaak == "M":
+                Muntcount +=1
+                break
+            if smaak == "V":
+                Vanillecount += 1
+                break
+            else:
+                print("Sorry, dat snap ik niet.")
+
+
+    
+        
+        
+
+
+
+
 
 def kies_horen_of_bakje(bolletje):
     global aantalbakjes, aantalhoorntjes
@@ -74,14 +108,26 @@ def totaalberekenen():
 
 
 def bonnetje(totaal):
+    global Chocoladecount, Vanillecount, Muntcount, Aardbeicount
     totaal = totaalberekenen()
     
 
     print("--------[Papi Gelato]--------")
-    if aantalbolletjes > 0:
-        print(f"Bolletjes {aantalbolletjes} x €{PRIJSBOLLETJE}  = € {round(aantalbolletjes * PRIJSBOLLETJE,2)}  ")
+    if Chocoladecount > 0:
+        print(f"B.Chocolade {Chocoladecount} x €{PRIJSBOLLETJE}  = € {round(Chocoladecount * PRIJSBOLLETJE,2)}  ")
+
+    if Vanillecount > 0:
+        print(f"B.Vannile {Vanillecount} x €{PRIJSBOLLETJE}  = € {round(Vanillecount * PRIJSBOLLETJE,2)}  ")
+
+    if Muntcount > 0:
+        print(f"B.Munt {Muntcount} x €{PRIJSBOLLETJE}  = € {round(Muntcount * PRIJSBOLLETJE,2)}  ")
+
+    if Aardbeicount > 0:
+        print(f"B.Aardbei {Aardbeicount} x €{PRIJSBOLLETJE}  = € {round(Aardbeicount * PRIJSBOLLETJE,2)}  ")
+
     if aantalbakjes > 0:
         print(f"Bakjes    {aantalbakjes} x €{PRIJSBAKJE} = € {round(aantalbakjes* PRIJSBAKJE,2)}     ")
+
     if aantalhoorntjes > 0:
         print(f"Hoorntjes {aantalhoorntjes} x €{PRIJSHOORNTJE} = € {round(aantalhoorntjes * PRIJSHOORNTJE,2)}  ")
     print("                   ---------- +")

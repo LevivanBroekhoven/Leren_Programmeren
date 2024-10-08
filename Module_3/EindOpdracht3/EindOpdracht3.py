@@ -5,6 +5,7 @@ print("Welkom bij Papi Gelato! Je mag alle smaken kiezen zolang het maar vanille
 
 while doorgaan != "nee":
     bolletje = Vraag_bolletjes()
+    Smaken()
     kies_horen_of_bakje(bolletje)
     doorgaan = meerbestellen()
 
