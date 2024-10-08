@@ -1,7 +1,7 @@
 from EindOpdracht3Data import *
 from EindOpdrachtFunctions import *
 doorgaan = "ja"
-print("Welkom bij Papi Gelato! Je mag alle smaken kiezen zolang het maar vanille ijs is.")
+print("Welkom bij Papi Gelato!")
 
 while doorgaan != "nee":
     bolletje = Vraag_bolletjes()

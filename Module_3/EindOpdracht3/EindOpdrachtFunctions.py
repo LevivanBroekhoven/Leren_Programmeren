@@ -40,17 +40,44 @@ def Smaken():
             else:
                 print("Sorry, dat snap ik niet.")
 
-
+def Toppings(BakjeFhoorntje):
+    global aantalbolletjes, toppings, slagroomcount, sprinkelscount, CaramelsausBakje, Caramelsaushoorntje
+    toppings = 0
+    slagroomcount = 0
+    sprinkelscount = 0
+    CaramelsausBakje = 0
+    Caramelsaushoorntje =0
     
-        
-        
 
-
-
-
+    while True:
+        topping = input("Wat voor topping wilt u? A) Geen, B) Slagroom, C) Sprinkels of D) Caramel Saus? ")
+        if topping == "A":
+            ()
+            break
+        if topping == "B":
+                toppings +=1
+                slagroomcount += 1
+                break
+        if topping == "C":
+                aantal = aantalbolletjes * 1 
+                toppings += aantal
+                sprinkelscount += aantal
+                break
+        if topping == "D":
+            toppings+= 1
+            if BakjeFhoorntje == "bakje":
+                CaramelsausBakje += 1
+            if BakjeFhoorntje == "hoorntje":
+                Caramelsaushoorntje += 1
+            break
+        else:
+            print("Sorry, dat snap ik niet.")
 
 def kies_horen_of_bakje(bolletje):
     global aantalbakjes, aantalhoorntjes
+    bakje = ("bakje")
+    hoorntje=("hoorntje")
+
 
     while True:
         if MIN_BOLLETJES <= bolletje <= MAX_BOLLETJES_HOORNTJE:
@@ -58,14 +85,17 @@ def kies_horen_of_bakje(bolletje):
             if hoorntjeofBakje == "hoorntje":
                 print(f"Hier is uw {bolletje} bolletjes in een hoorntje.")
                 aantalhoorntjes += 1
+                Toppings(hoorntje)
                 break
             elif hoorntjeofBakje == "bakje":
                 print(f"Hier is uw {bolletje} bolletjes in een bakje.")
                 aantalbakjes += 1
+                Toppings(bakje)
                 break
         if MAX_BOLLETJES_HOORNTJE <= bolletje <= MAX_BOLLETJES_BAKJE:
             print(f"Hier is uw {bolletje} bolletjes in een bakje.")
             aantalbakjes += 1
+            Toppings(bakje)
             break
 
         elif bolletje > MAX_BOLLETJES_BAKJE:
@@ -93,12 +123,20 @@ def meerbestellen():
 
 
 def totaalberekenen():
-    global aantalbolletjes, aantalbakjes, aantalhoorntjes
+    global aantalbolletjes, aantalbakjes, aantalhoorntjes, toppings, slagroomcount, sprinkelscount, CaramelsausBakje, Caramelsaushoorntje, totaaltopping
     totaalbol = aantalbolletjes * PRIJSBOLLETJE
     totaalbak = aantalbakjes * PRIJSBAKJE
     totaalhorn = aantalhoorntjes * PRIJSHOORNTJE
 
-    totaal = round(totaalbol + totaalbak + totaalhorn, 2)
+    totaalslagroom = slagroomcount * PRIJSSLAGROOM
+    totaalsprinkels = sprinkelscount * PRIJSSPRINKELS
+    totaalcaramelbakje = CaramelsausBakje * PRIJSCARAMELBAKJE
+    totaalcaramelhoorntje = Caramelsaushoorntje * PRIJSCARAMELHOORNTJE
+
+
+    totaaltopping = round(totaalslagroom + totaalsprinkels + totaalcaramelbakje + totaalcaramelhoorntje, 2)
+
+    totaal = round(totaalbol + totaalbak + totaalhorn + totaaltopping, 2)
 
 
 
@@ -108,7 +146,7 @@ def totaalberekenen():
 
 
 def bonnetje(totaal):
-    global Chocoladecount, Vanillecount, Muntcount, Aardbeicount
+    global Chocoladecount, Vanillecount, Muntcount, Aardbeicount, totaaltopping, toppings
     totaal = totaalberekenen()
     
 
@@ -130,6 +168,9 @@ def bonnetje(totaal):
 
     if aantalhoorntjes > 0:
         print(f"Hoorntjes {aantalhoorntjes} x €{PRIJSHOORNTJE} = € {round(aantalhoorntjes * PRIJSHOORNTJE,2)}  ")
+
+    if toppings  > 0:
+        print(f"Topping    = € {totaaltopping}     ")
     print("                   ---------- +")
     print(f"Totaal             = € {float(totaal)}  ")
 
