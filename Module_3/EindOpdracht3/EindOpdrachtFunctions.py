@@ -14,40 +14,34 @@ def Vraag_bolletjes():
         except ValueError:
             print("Sorry, dat snap ik niet.")
 
-def Smaken():
-    global aantalbolletjes, Aardbeicount, Chocoladecount, Muntcount, Vanillecount
-    Aardbeicount = 0
-    Chocoladecount =0
-    Muntcount=0
-    Vanillecount=0
+def Smaken(aantalbolletjes, Smakenlijst):
     
     for x in range(aantalbolletjes):
         while True:
 
             smaak = input(f"Welke smaak wilt u voor bolletje {x+1}? A) Aardbei, C) Chocolade, M) Munt of V) Vanille? ")
+            
             if smaak == "A":
-                Aardbeicount += 1
+                Smakenlijst[0]['Aardbeismaak'] += 1
+        
                 break
             if smaak == "C":
-                Chocoladecount +=1
+                Smakenlijst[1]["Chocoladesmsaak"] += 1
                 break
             if smaak == "M":
-                Muntcount +=1
+                Smakenlijst[2]['Muntsmaak'] += 1
                 break
             if smaak == "V":
-                Vanillecount += 1
+                Smakenlijst[3]['Vanillesmaak'] += 1
                 break
             else:
                 print("Sorry, dat snap ik niet.")
 
-def Toppings(BakjeFhoorntje):
-    global aantalbolletjes, toppings, slagroomcount, sprinkelscount, CaramelsausBakje, Caramelsaushoorntje
+    return(Smakenlijst)
+
+def Toppings(BakjeFhoorntje, Toppingslijst):
     toppings = 0
-    slagroomcount = 0
-    sprinkelscount = 0
-    CaramelsausBakje = 0
-    Caramelsaushoorntje =0
-    
+  
 
     while True:
         topping = input("Wat voor topping wilt u? A) Geen, B) Slagroom, C) Sprinkels of D) Caramel Saus? ")
@@ -56,27 +50,29 @@ def Toppings(BakjeFhoorntje):
             break
         if topping == "B":
                 toppings +=1
-                slagroomcount += 1
+                Toppingslijst[0]["Slagroom"]
                 break
         if topping == "C":
-                aantal = aantalbolletjes * 1 
-                toppings += aantal
-                sprinkelscount += aantal
+                Toppingslijst[1]["Sprinkels"]
                 break
         if topping == "D":
             toppings+= 1
             if BakjeFhoorntje == "bakje":
-                CaramelsausBakje += 1
+                Toppingslijst[3]["CaramelsausBakje"]
+
             if BakjeFhoorntje == "hoorntje":
-                Caramelsaushoorntje += 1
+                Toppingslijst[2]["CaramelsausHoorntje"]
             break
         else:
             print("Sorry, dat snap ik niet.")
+
+    return(toppings)
 
 def kies_horen_of_bakje(bolletje):
     global aantalbakjes, aantalhoorntjes
     bakje = ("bakje")
     hoorntje=("hoorntje")
+    toppingtype =()
 
 
     while True:
@@ -85,17 +81,17 @@ def kies_horen_of_bakje(bolletje):
             if hoorntjeofBakje == "hoorntje":
                 print(f"Hier is uw {bolletje} bolletjes in een hoorntje.")
                 aantalhoorntjes += 1
-                Toppings(hoorntje)
+                toppingtype = (hoorntje)
                 break
             elif hoorntjeofBakje == "bakje":
                 print(f"Hier is uw {bolletje} bolletjes in een bakje.")
                 aantalbakjes += 1
-                Toppings(bakje)
+                toppingtype = (bakje)
                 break
         if MAX_BOLLETJES_HOORNTJE <= bolletje <= MAX_BOLLETJES_BAKJE:
             print(f"Hier is uw {bolletje} bolletjes in een bakje.")
             aantalbakjes += 1
-            Toppings(bakje)
+            toppingtype =(bakje)
             break
 
         elif bolletje > MAX_BOLLETJES_BAKJE:
@@ -105,6 +101,8 @@ def kies_horen_of_bakje(bolletje):
             
         else:
             print("Sorry, dat snap ik niet.")
+
+    return(aantalhoorntjes,aantalbakjes,toppingtype)
 
         
           
@@ -122,46 +120,50 @@ def meerbestellen():
         print("Sorry, dat snap ik niet.")
 
 
-def totaalberekenen():
-    global aantalbolletjes, aantalbakjes, aantalhoorntjes, toppings, slagroomcount, sprinkelscount, CaramelsausBakje, Caramelsaushoorntje, totaaltopping
+def totaalberekenen(Toppingslijst):
     totaalbol = aantalbolletjes * PRIJSBOLLETJE
     totaalbak = aantalbakjes * PRIJSBAKJE
     totaalhorn = aantalhoorntjes * PRIJSHOORNTJE
 
-    totaalslagroom = slagroomcount * PRIJSSLAGROOM
-    totaalsprinkels = sprinkelscount * PRIJSSPRINKELS
-    totaalcaramelbakje = CaramelsausBakje * PRIJSCARAMELBAKJE
-    totaalcaramelhoorntje = Caramelsaushoorntje * PRIJSCARAMELHOORNTJE
+    for topping_dict in Toppingslijst:
+        for topping, aantal in topping_dict.items():
+            if topping == "Slagroom":
+                totaalslagroom = aantal * PRIJSSLAGROOM
+                
+            if topping == "Sprinkels":
+                totaalsprinkels = aantal * PRIJSSPRINKELS
+            if topping == "CaramelsausBakje":
+                totaalcaramelbakje = aantal * PRIJSCARAMELBAKJE
+            if topping == "CaramelsausHoorntje":
+                totaalcaramelhoorntje = aantal * PRIJSCARAMELHOORNTJE
+            
+
 
 
     totaaltopping = round(totaalslagroom + totaalsprinkels + totaalcaramelbakje + totaalcaramelhoorntje, 2)
+    print(totaalslagroom)
 
     totaal = round(totaalbol + totaalbak + totaalhorn + totaaltopping, 2)
+ 
 
 
 
-    return(totaal)
+    return(totaal,totaaltopping)
 
 
 
 
-def bonnetje(totaal):
-    global Chocoladecount, Vanillecount, Muntcount, Aardbeicount, totaaltopping, toppings
-    totaal = totaalberekenen()
+def bonnetje(totaal, aantalbakjes ,aantalhoorntjes, toppings,Smakenlijst,totaaltopping ):
+    
     
 
     print("--------[Papi Gelato]--------")
-    if Chocoladecount > 0:
-        print(f"B.Chocolade {Chocoladecount} x €{PRIJSBOLLETJE}  = € {round(Chocoladecount * PRIJSBOLLETJE,2)}  ")
 
-    if Vanillecount > 0:
-        print(f"B.Vannile {Vanillecount} x €{PRIJSBOLLETJE}  = € {round(Vanillecount * PRIJSBOLLETJE,2)}  ")
-
-    if Muntcount > 0:
-        print(f"B.Munt {Muntcount} x €{PRIJSBOLLETJE}  = € {round(Muntcount * PRIJSBOLLETJE,2)}  ")
-
-    if Aardbeicount > 0:
-        print(f"B.Aardbei {Aardbeicount} x €{PRIJSBOLLETJE}  = € {round(Aardbeicount * PRIJSBOLLETJE,2)}  ")
+    for smaak_dict in Smakenlijst:
+        for smaak, aantal in smaak_dict.items():
+            if aantal > 0: 
+                totaal_prijs = round(aantal * PRIJSBOLLETJE, 2) 
+                print(f"{smaak}:    {aantal} bolletjes x €{PRIJSBOLLETJE} = €{totaal_prijs}")
 
     if aantalbakjes > 0:
         print(f"Bakjes    {aantalbakjes} x €{PRIJSBAKJE} = € {round(aantalbakjes* PRIJSBAKJE,2)}     ")
