@@ -11,5 +11,5 @@ PRIJSSPRINKELS = 0.30
 PRIJSCARAMELBAKJE = 0.90
 PRIJSCARAMELHOORNTJE = 0.60
 LITERIJS = 9.80
-BTW = 9
+BTW = 6
 TXT = "“Sorry dat is geen optie die we aanbieden...”"
