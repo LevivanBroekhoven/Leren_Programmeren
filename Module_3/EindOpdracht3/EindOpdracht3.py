@@ -4,8 +4,8 @@ from EindOpdrachtFunctions import *
 aantalbolletjes = 0
 aantalbakjes = 0
 aantalhoorntjes = 0
-Smakenlijst = [{'Aardbei': 0}, {'Chocolade': 0}, {'Munt': 0}, {'Vanille': 0}]
-SmakenlijstLiter = [{'Aardbei': 0}, {'Chocolade': 0}, {'Munt': 0}, {'Vanille': 0}]
+Smakenlijst = [{'Aardbei': 0}, {'Chocolade': 0},{'Vanille': 0}]
+SmakenlijstLiter = [{'Aardbei': 0}, {'Chocolade': 0},{'Vanille': 0}]
 Toppingslijst = [{'Slagroom': 0}, {'Sprinkels': 0}, {'CaramelsausHoorntje': 0}, {'CaramelsausBakje': 0}]
 
 doorgaan = "ja"

@@ -30,9 +30,6 @@ def smakenliterijs(literijs, SmakenlijstLiter):
             elif smaak == "C":
                 SmakenlijstLiter[1]["Chocolade"] += 1
                 break
-            elif smaak == "M":
-                SmakenlijstLiter[2]['Munt'] += 1
-                break
             elif smaak == "V":
                 SmakenlijstLiter[3]['Vanille'] += 1
                 break
@@ -64,9 +61,6 @@ def Smaken(aantalbolletjes, Smakenlijst):
                 break
             elif smaak == "C":
                 Smakenlijst[1]["Chocolade"] += 1
-                break
-            elif smaak == "M":
-                Smakenlijst[2]['Munt'] += 1
                 break
             elif smaak == "V":
                 Smakenlijst[3]['Vanille'] += 1
