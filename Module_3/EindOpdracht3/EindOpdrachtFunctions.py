@@ -5,7 +5,7 @@ def PofZklant():
         if PofZklant == "Z" or "P":
             return PofZklant
         else:
-            print("Sorry, dat snap ik niet.")
+            print(TXT)
 
             
 
@@ -16,7 +16,7 @@ def Literijs():
         
             return literijs
         except ValueError:
-            print("Sorry, dat snap ik niet.")
+            print(TXT)
 
 
 
@@ -37,7 +37,7 @@ def smakenliterijs(literijs, SmakenlijstLiter):
                 SmakenlijstLiter[3]['Vanille'] += 1
                 break
             else:
-                print("Sorry, dat snap ik niet.")
+                print(TXT)
     return SmakenlijstLiter
 
 def Vraag_bolletjes(aantalbolletjes):
@@ -52,7 +52,7 @@ def Vraag_bolletjes(aantalbolletjes):
                 aantalbolletjes += bolletje
                 return bolletje, aantalbolletjes
         except ValueError:
-            print("Sorry, dat snap ik niet.")
+            print(TXT)
 
 
 def Smaken(aantalbolletjes, Smakenlijst):
@@ -72,7 +72,7 @@ def Smaken(aantalbolletjes, Smakenlijst):
                 Smakenlijst[3]['Vanille'] += 1
                 break
             else:
-                print("Sorry, dat snap ik niet.")
+                print(TXT)
     return Smakenlijst
 
 def Toppings(BakjeFhoorntje, Toppingslijst):
@@ -97,7 +97,7 @@ def Toppings(BakjeFhoorntje, Toppingslijst):
                 Toppingslijst[2]["CaramelsausHoorntje"] += 1
             break
         else:
-            print("Sorry, dat snap ik niet.")
+            print(TXT)
     return toppings, Toppingslijst
 
 def kies_horen_of_bakje(bolletje, aantalhoorntjes, aantalbakjes):
@@ -124,7 +124,7 @@ def kies_horen_of_bakje(bolletje, aantalhoorntjes, aantalbakjes):
             toppingtype = bakje
             break 
         else:
-            print("Sorry, dat snap ik niet.")
+            print(TXT)
 
     return aantalhoorntjes, aantalbakjes, toppingtype
 

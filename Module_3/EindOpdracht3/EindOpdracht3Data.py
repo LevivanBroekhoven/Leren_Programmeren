@@ -12,3 +12,4 @@ PRIJSCARAMELBAKJE = 0.90
 PRIJSCARAMELHOORNTJE = 0.60
 LITERIJS = 9.80
 BTW = 9
+TXT = "“Sorry dat is geen optie die we aanbieden...”"
