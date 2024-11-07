@@ -23,7 +23,7 @@ def Literijs():
 def smakenliterijs(literijs, SmakenlijstLiter):
     for x in range(literijs):
         while True:
-            smaak = input(f"Welke smaak wilt u voor Liter {x+1}? A) Aardbei, C) Chocolade, M) Munt of V) Vanille? ")
+            smaak = input(f"Welke smaak wilt u voor Liter {x+1}? A) Aardbei, C) Chocolade of V) Vanille? ")
             if smaak == "A":
                 SmakenlijstLiter[0]['Aardbei'] += 1
                 break
@@ -31,7 +31,7 @@ def smakenliterijs(literijs, SmakenlijstLiter):
                 SmakenlijstLiter[1]["Chocolade"] += 1
                 break
             elif smaak == "V":
-                SmakenlijstLiter[3]['Vanille'] += 1
+                SmakenlijstLiter[2]['Vanille'] += 1
                 break
             else:
                 print(TXT)
@@ -55,7 +55,7 @@ def Vraag_bolletjes(aantalbolletjes):
 def Smaken(aantalbolletjes, Smakenlijst):
     for x in range(aantalbolletjes):
         while True:
-            smaak = input(f"Welke smaak wilt u voor bolletje {x+1}? A) Aardbei, C) Chocolade, M) Munt of V) Vanille? ")
+            smaak = input(f"Welke smaak wilt u voor bolletje {x+1}? A) Aardbei, C) Chocolade of V) Vanille? ")
             if smaak == "A":
                 Smakenlijst[0]['Aardbei'] += 1
                 break
@@ -63,7 +63,7 @@ def Smaken(aantalbolletjes, Smakenlijst):
                 Smakenlijst[1]["Chocolade"] += 1
                 break
             elif smaak == "V":
-                Smakenlijst[3]['Vanille'] += 1
+                Smakenlijst[2]['Vanille'] += 1
                 break
             else:
                 print(TXT)
@@ -122,7 +122,7 @@ def kies_horen_of_bakje(bolletje, aantalhoorntjes, aantalbakjes):
 
     return aantalhoorntjes, aantalbakjes, toppingtype
 
-def totaalberekenen(aantalbolletjes, aantalbakjes, aantalhoorntjes, Toppingslijst):
+def totaalberekenen(aantalbolletjes, aantalbakjes, aantalhoorntjes, Toppingslijst,):
     totaalbol = aantalbolletjes * PRIJSBOLLETJE
     totaalbak = aantalbakjes * PRIJSBAKJE
     totaalhorn = aantalhoorntjes * PRIJSHOORNTJE
@@ -147,36 +147,39 @@ def totaalberekenen(aantalbolletjes, aantalbakjes, aantalhoorntjes, Toppingslijs
 
     return totaal, totaaltoppings
 
-def bonnetje(totaal, aantalbakjes, aantalhoorntjes, toppings, Smakenlijst, totaaltopping):
-    print("------------------[Papi Gelato]------------------")
+def bonnetje(totaal, aantalbakjes, aantalhoorntjes, toppings, Smakenlijst, totaaltopping, SmakenlijstLiter , PofZ):
+    print("------------------Papi Gelato]-----------------")
+    if PofZ == "P":
+     
 
-    for smaak_dict in Smakenlijst:
-        for smaak, aantal in smaak_dict.items():
-            if aantal > 0: 
-                totaal_prijs = round(aantal * PRIJSBOLLETJE, 2) 
-                print(f"{smaak:20}:    {aantal} bolletjes x €{PRIJSBOLLETJE} = €{totaal_prijs}") 
+        for smaak_dict in Smakenlijst:
+            for smaak, aantal in smaak_dict.items():
+                if aantal > 0: 
+                    totaal_prijs = round(aantal * PRIJSBOLLETJE, 2) 
+                    print(f"{smaak:20}    {aantal} x €{PRIJSBOLLETJE} = €{totaal_prijs:.2f}") 
 
-    if aantalbakjes > 0:
-        print(f"Bakjes    {aantalbakjes:16} x €{PRIJSBAKJE} = € {round(aantalbakjes * PRIJSBAKJE, 2)}")
+        if aantalbakjes > 0:
+            print(f"Bakjes    {aantalbakjes:15} x €{PRIJSBAKJE:.2f} = €{round(aantalbakjes * PRIJSBAKJE, 2):.2f}")
 
-    if aantalhoorntjes > 0:
-        print(f"Hoorntjes {aantalhoorntjes:16} x €{PRIJSHOORNTJE} = € {round(aantalhoorntjes * PRIJSHOORNTJE, 2)}")
+        if aantalhoorntjes > 0:
+            print(f"Hoorntjes {aantalhoorntjes:15} x €{PRIJSHOORNTJE:.2f} = €{round(aantalhoorntjes * PRIJSHOORNTJE, 2):.2f}")
 
-    if toppings > 0:
-        print(f"Topping     {toppings:14} = € {totaaltopping}")
-    print("                   ---------------------------------- +")
-    print(f"Totaal             = € {float(totaal):8.2f}")
 
-def bonnetjeZakkelijk(SmakenlijstLiter, literijs):
-    totaal = literijs * LITERIJS
-    btw = totaal / 100 * BTW
-    print("------------------[Papi Gelato]------------------")
+        if toppings > 0:
+            print(f"Toppings     {toppings:12} x €{totaaltopping:.2f} = €{round(toppings * totaaltopping, 2):.2f}")
 
-    for smaak_dict in SmakenlijstLiter:
-        for smaak, aantal in smaak_dict.items():
-            if aantal > 0: 
-                totaal_prijs = round(aantal * LITERIJS, 2) 
-                print(f" L. {smaak:20}:    {aantal} x €{LITERIJS} = €{totaal_prijs}") 
-    print("                   ---------------------------------- +")
-    print(f"Totaal             = € {float(totaal):8.2f}")
-    print(f"BTW                = € {float(btw):8.2f}")
+    if PofZ == "Z":
+        for smaak_dict in SmakenlijstLiter:
+            for smaak, aantal in smaak_dict.items():
+                if aantal > 0: 
+                    totaal_prijs = round(aantal * LITERIJS, 2) 
+                    print(f" L. {smaak:18}:    {aantal:3} x €{LITERIJS} = €{totaal_prijs:8.2f}") 
+        
+        
+        btw = totaal / 100 * BTW
+
+    print("                   -------------------------- +")
+    print(f"Totaal  =                             €{float(totaal):8.2f}")
+    if PofZ == "Z":
+        print(f"BTW     =                             €{float(btw):8.2f}")
+

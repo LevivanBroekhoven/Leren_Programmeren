@@ -4,6 +4,10 @@ from EindOpdrachtFunctions import *
 aantalbolletjes = 0
 aantalbakjes = 0
 aantalhoorntjes = 0
+toppings = 0
+totaal = 0
+totaaltopping = 0
+literijs = 0
 Smakenlijst = [{'Aardbei': 0}, {'Chocolade': 0},{'Vanille': 0}]
 SmakenlijstLiter = [{'Aardbei': 0}, {'Chocolade': 0},{'Vanille': 0}]
 Toppingslijst = [{'Slagroom': 0}, {'Sprinkels': 0}, {'CaramelsausHoorntje': 0}, {'CaramelsausBakje': 0}]
@@ -19,16 +23,15 @@ if PofZ == "P":
         Smakenlijst = Smaken(bolletje, Smakenlijst)
         toppings, Toppingslijst = Toppings(toppingtype, Toppingslijst)
         doorgaan = input("Wilt u nog meer bestellen? (Ja/Nee) ")
-        
-
-    totaal, totaaltopping = totaalberekenen(aantalbolletjes, aantalbakjes, aantalhoorntjes, Toppingslijst)
-    bonnetje(totaal, aantalbakjes, aantalhoorntjes, toppings, Smakenlijst, totaaltopping)
-    print("Bedankt en tot ziens!")
+        totaal, totaaltopping = totaalberekenen(aantalbolletjes, aantalbakjes, aantalhoorntjes, Toppingslijst)
+    
 
 elif PofZ == "Z":
-    print("U bent een zakelijke klant")
     literijs = Literijs()
     SmakenlijstLiter = smakenliterijs(literijs, SmakenlijstLiter)
-    bonnetjeZakkelijk(SmakenlijstLiter, literijs)
+    totaal = literijs * LITERIJS
+
+bonnetje(totaal, aantalbakjes, aantalhoorntjes, toppings, Smakenlijst, totaaltopping , SmakenlijstLiter, PofZ)
+print("Bedankt en tot ziens!")
 
 
