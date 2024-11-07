@@ -1,6 +1,6 @@
-def De_rest(Getal:int) -> bool:
+def Even_Oneven(Getal:int) -> bool:
     return Getal % 2 == 0
-# geeft de rest van de meegegeven int
+#Kijkt of een getal even of oneven is
 
 
 def Draai_de_zin_om(Dezin:str) -> str:
@@ -39,4 +39,3 @@ def tafels(Nummer1:int, Nummer2:int=10) -> None:
         print(f'{tafel} x {Nummer1} = {uitkomst}')
 # doet het eerste nummer in een tafel tot de 2de nummer
 
-tafels(1,10)

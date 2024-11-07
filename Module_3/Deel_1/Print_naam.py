@@ -9,5 +9,5 @@ while True:
 
 
 for x in list:
-    print(f"{x['naam']} die in {x['Woon']} woont, is {x['leeftijd']}  jaar oud")
+    print(f"{x['naam']} die in {x['Woonplaats']} woont, is {x['leeftijd']}  jaar oud")
 

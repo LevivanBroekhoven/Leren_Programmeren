@@ -16,8 +16,6 @@ def reeksrekenen(reeks):
     return nieuwereeks
     
     
-
-
 while True:
     reeks = reeksrekenen(reeks)
     print(reeks)

@@ -11,8 +11,7 @@ while not lootjes_trekken:
         if naam in namen_lijst:
             naam = input("Voer een nieuwe naam in: ")
         else:
-            namen_lijst.append(naam)
-            namen_lijst_copy.append(naam)   
+            namen_lijst.append(naam)  
             break
 
     if len(namen_lijst) >= 3:
@@ -36,14 +35,12 @@ while True:
 
 
 
-while zien == True:
+while zien:
     welkezien = input("welke wil je zien? ")
 
     for naam, assigned_naam in lootjes.items():
         if naam == welkezien:
             print(f"{naam} heeft {assigned_naam}")
-
-
-            vederzien = input("wil je nog een zien? (j/n) ")
-            if vederzien == ("n"):
-                zien = False
+            
+            zien = input("wil je nog een zien? (j/n) ") == "j"
+                 

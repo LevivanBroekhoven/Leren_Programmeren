@@ -4,7 +4,6 @@ lijst = sorted(fruitmand, key = lambda x: len(x["name"]))
 lijst.reverse()
 
 langste = lijst[0]
-kleur = langste['color'] 
 
 
 kleurenvertaal ={

@@ -1,18 +1,11 @@
 list = []
 
 
-def name():
-    naam = input("Wat is je naam? ")
-    return(naam)
-
-def age():
-    leeftijd = input("Wat is je leeftijd? ")
-    return(leeftijd)
-
 def vragen():
-    naam = name()
-    leeftijd = age()
-    return{"naam":naam, "leeftijd":leeftijd}
+    dict = {}
+    dict['naam']= input("Wat is je naam? ")
+    dict["leeftijd"] = input("Wat is je leeftijd? ")
+    return dict
 
 while True: 
     list.append(vragen())
@@ -22,7 +15,7 @@ while True:
 
 
 for x in list:
-    print(f"{x['naam']} is {x['leeftijd']} jaar oud")
+    print(x)
 
 
 

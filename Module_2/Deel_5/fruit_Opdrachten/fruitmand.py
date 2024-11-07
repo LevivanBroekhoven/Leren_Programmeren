@@ -1,4 +1,4 @@
-from random import shuffle
+# from random import shuffle
 
 fruitmand = [{
     'name' : 'ananas',
@@ -82,4 +82,4 @@ fruitmand = [{
     'round' : True
 }]
 
-shuffle(fruitmand)
+# shuffle(fruitmand)

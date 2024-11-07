@@ -3,36 +3,37 @@ zeg Welkom bij Papi Gelato! Je mag alle smaken kiezen zolang het maar vanille ij
 bolletje = vraag hoeveel bolletjes wil je?
 
 
-als meer dan 1 en minder dan 3 bolletjes gevraagt worden
 
-    
 hoorntjeofBakje = vraag Wilt u deze aantal bolletjes in een hoorntje of bakje? 
 
     als hoorntjeofBakje == hoorntje
         zeg Hier is uw aantal bolletjes in een hoorntje.
-        
+
     als hoorntjeofBakje == bakje
         zeg Hier is uw aantal bolletjes in een bakje
-        
+
     anders
         zeg Sorry dat snap ik niet
 
 
-elif 4 <= bolletje <= 8:
-    print(f"Hier is uw {bolletje} bolletjes in een bakje.")
+        als meer dan 4 en minder dan 8 bolletjes gevraagt worden
+            zeg Hier is uw aantal bolletjes in een bakje.
 
-elif bolletje > 8:
-    print("Sorry, zulke grote bakken hebben we niet.")
+        als meer 8 bolletjes gevraagt worden
+            zeg Sorry, zulke grote bakken hebben we niet.
 
-else:
-    print("Graag een geldig aantal bolletjes in te voeren.")
+        anders
+            zeg Gelieve een geldig aantal bolletjes in te voeren.
 
-jofninput = input("Wilt u nog meer bestellen? (Ja/Nee) ")
-if jofninput == "nee":
-    print("Bedankt en tot ziens!")
-    break
-if jofninput == "ja":
-    ()
-else:
-    print("Sorry, dat snap ik niet.")
+        jofninput = vraag Wilt u nog meer bestellen? (Ja/Nee)
 
+        als jofninput == nee
+            zeg Bedankt en tot ziens!
+            
+        als jofninput == ja
+            opnieuw beginnen
+
+        anders
+            zeg Sorry, dat snap ik niet.
+
+`

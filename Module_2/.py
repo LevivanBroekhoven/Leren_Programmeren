@@ -62,4 +62,31 @@
         
 #     return score
 
+("------------------------------------------------")
 
+import os
+import sys
+
+# Stel de map in waar je het bestand wilt opslaan
+chosen_folder = '/school/code/Leren_Programmeren/outputs' # Verander dit naar het pad van jouw map
+
+# Controleer of de map bestaat, anders maak de map aan
+if not os.path.exists(chosen_folder):
+    os.makedirs(chosen_folder)
+
+nummer = 2
+# Bouw het volledige pad naar het bestand
+file_path = os.path.join(chosen_folder, f'Wachtwoorden{nummer}.txt')
+
+# Save the original stdout
+original_stdout = sys.stdout
+
+# Redirect stdout to a file
+with open(file_path, 'w') as f:
+    sys.stdout = f
+    print("Werkt dit? 2")
+    print("I have  big brain")
+    print("wachtwoord")
+
+# Herstel de originele stdout
+sys.stdout = original_stdout
